@@ -1,0 +1,21 @@
+﻿// See https://aka.ms/new-console-template for more information
+
+using System.Xml;
+using DSA.ArrayDSA;
+
+var newArr = new ArrayClass<int>(2);
+newArr.Insert(2);
+newArr.Insert(3);
+newArr.Insert(4);
+// newArr.PrintItems();
+Console.WriteLine("-------");
+newArr.Delete(2);
+newArr.Delete(3);
+// newArr.PrintItems();
+Console.WriteLine("-------");
+newArr.InsertAt(25, 10);
+newArr.PrintItems();
+
+
+
+// Console.WriteLine(newArr.IndexOf(100));
