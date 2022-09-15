@@ -65,6 +65,7 @@ public class ArrayClass<T> where T : IEquatable<T>
             for (int i = index; i < _items.Length - 1 ; i++)
             {
                 _items[i] = _items[i + 1];
+                count--;
             }
             return 1;
         }
@@ -86,4 +87,27 @@ public class ArrayClass<T> where T : IEquatable<T>
         }
         return -1;
     }
+    
+
+    public static ArrayClass<T> Intersect(T[] arr1, T[] arr2)
+    {
+        var dict = new Dictionary<T, int>();
+        var resultArr = new ArrayClass<T>(arr1.Length > arr2.Length ? arr1.Length : arr2.Length);
+        for (int i = 0; i < arr1.Length; i++)
+        {
+            if (dict.ContainsKey(arr1[i])) dict[arr1[i]] += 1;
+            else dict[arr1[i]] = 1;
+        }
+
+        for (int i = 0; i < arr2.Length; i++)
+        {
+            if (dict.ContainsKey(arr2[i]) && resultArr.IndexOf(arr2[i]) == -1)
+            {
+                resultArr.Insert(arr2[i]);
+            }
+        }
+
+        return resultArr;
+    }
+    
 }

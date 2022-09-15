@@ -14,8 +14,8 @@ newArr.Delete(3);
 // newArr.PrintItems();
 Console.WriteLine("-------");
 newArr.InsertAt(25, 10);
-newArr.PrintItems();
+// newArr.PrintItems();
 
+var intersectionArr = ArrayClass<int>.Intersect(new int[] {1,2,3}, new int[] {1,2,2 ,6});
+intersectionArr.PrintItems();
 
-
-// Console.WriteLine(newArr.IndexOf(100));
