@@ -1,21 +1,59 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Collections;
 using System.Xml;
 using DSA.ArrayDSA;
 using DSA.LinkedListDSA;
+using DSA.StackClassDSA;
+
+var stack = new StackClass();
+
+Console.WriteLine(stack.MatchBrackets("{j}()"));
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ////////////////LinkedList
-var Ll = new LinkedListClass();
+// var Ll = new LinkedListClass();
+// // Ll.AddLast(5);
+// Ll.AddLast(1);
+// Ll.AddLast(2);
+// Ll.AddLast(3);
+// Ll.AddLast(4);
 // Ll.AddLast(5);
-Ll.AddLast(1);
-Ll.AddLast(2);
-Ll.AddLast(3);
-Ll.AddLast(4);
-Ll.AddLast(5);
-Ll.AddLast(6);
+// Ll.AddLast(6);
 // Ll.PrintMiddle();
 
-Console.WriteLine(Ll.HasLoop());
+// Console.WriteLine(Ll.HasLoop());
 
 
 ////////////////Array
