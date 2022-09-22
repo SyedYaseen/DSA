@@ -1,9 +1,45 @@
 using System.Collections;
+using DSA.ArrayDSA;
 
 namespace DSA.StackClassDSA;
 
 public class StackClass
 {
+    private int _count = -1;
+    private int[] stack;
+    public StackClass(int size)
+    {
+        stack = new int[size];
+    }
+
+    public void Push(int value)
+    {
+        stack[++_count] = value;
+    }
+
+    public int Pop()
+    {
+        if (_count > -1)
+        {
+            return stack[_count--];
+        }
+        
+        else throw new IndexOutOfRangeException();
+    }
+
+    public int Peek()
+    {
+        if (_count > -1) return stack[_count];
+        else throw new NullReferenceException();
+    }
+
+    public bool IsEmpty()
+    {
+        return _count > -1 ? true : false;
+    }
+    
+    
+    
     public Stack<char> BracketStack = new Stack<char>();
     public List<char> BracketsList = new List<char> { '{', '}', '<', '>', '(', ')'};
 
