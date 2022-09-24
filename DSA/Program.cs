@@ -6,14 +6,28 @@ using DSA.ArrayDSA;
 using DSA.LinkedListDSA;
 using DSA.StackClassDSA;
 
-var stack = new StackClass(5);
-stack.Push(1);
-stack.Push(2);
-stack.Push(3);
-Console.WriteLine(stack.Pop());
-Console.WriteLine(stack.Pop());
-Console.WriteLine(stack.Peek());
-Console.WriteLine(stack.IsEmpty());
+// var stack = new StackClass(5);
+// stack.Push(1);
+// stack.Push(2);
+// stack.Push(3);
+// stack.Push(3);
+// stack.Push(3);
+// stack.Push(3);
+// stack.Push(3);
+// stack.Push(25);
+//
+// Console.WriteLine(stack.Peek());
+// Console.WriteLine(stack.IsEmpty());
+
+var stack = new TwoStacksOneArray(5);
+stack.Push1(5);
+stack.Push1(3);
+stack.Push2(12);
+stack.Push1(200);
+
+// stack.Pop2();
+Console.WriteLine(stack.Peek1());
+Console.WriteLine(stack.Peek2());
 // Console.WriteLine(stack.MatchBrackets("{j}()"));
     
 

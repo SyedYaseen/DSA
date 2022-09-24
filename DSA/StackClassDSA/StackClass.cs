@@ -7,23 +7,39 @@ public class StackClass
 {
     private int _count = -1;
     private int[] stack;
+    private int _size = 0;
     public StackClass(int size)
     {
+        _size = size;
         stack = new int[size];
     }
 
     public void Push(int value)
     {
-        stack[++_count] = value;
+        if (_count < _size - 1) stack[++_count] = value;
+        
+        else
+        {
+            NewStack();
+            Push(value);
+        }
+    }
+
+
+    private void NewStack()
+    {
+        _size = _size * 2;
+        var newStack = new int[_size];
+        for (int i = 0; i < _count; i++)
+        {
+            newStack[i] = stack[i];
+        }
+        stack = newStack;
     }
 
     public int Pop()
     {
-        if (_count > -1)
-        {
-            return stack[_count--];
-        }
-        
+        if (_count > -1) return stack[_count--];
         else throw new IndexOutOfRangeException();
     }
 
