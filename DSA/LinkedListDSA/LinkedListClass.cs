@@ -20,7 +20,7 @@ public class LinkedListClass
         }
 
     }
-    
+    int result;
     public Node? First;
     public Node? Last;
     private int size;
@@ -85,21 +85,24 @@ public class LinkedListClass
 
     public int RemoveFirst()
     {
-        if (First == null) return -1;
+        
+        if (First == null) throw new NullReferenceException("Onnum illa");
         
         else if (First == Last)
         {
+            result = First.GetValue();
             First = Last = null;
             size--;
-            return 1;
+            return result;
         }
         else
         {
+            result = First.GetValue();
             var second = First._next;
             First._next = null;
             First = second;
             size--;
-            return 1;
+            return result;
         }
     }
 

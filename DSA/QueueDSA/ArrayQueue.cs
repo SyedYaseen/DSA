@@ -35,16 +35,6 @@ public class ArrayQueue
         }
     }
 
-    // public bool IsFull()
-    // {
-    //     return _back == _size - 1 ? true : false;
-    // }
-    //
-    // public bool IsEmpty()
-    // {
-    //     return _front > _back ? true : false;
-    // }
-    
     private void NewArrayQueue()
     {
         _size = _size * 2;

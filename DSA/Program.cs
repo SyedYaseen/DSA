@@ -3,37 +3,28 @@
 using System.Collections;
 using System.Xml;
 using DSA.ArrayDSA;
+using DSA.DictionaryDSA;
 using DSA.LinkedListDSA;
 using DSA.QueueDSA;
 using DSA.StackClassDSA;
 
-
-// var Q = new Queue<int>();
-// Q.Enqueue(5);
-// Q.Enqueue(10);
-// Q.Enqueue(15);
+// var charFinder = new FirstNonRepeatedCharacter();
 //
-// var ReversedQ = QueueClass.ReverseQ(Q);
-// Console.WriteLine(ReversedQ);
+// Console.WriteLine(charFinder.FindNonRepeatedChar("hello help"));
 
-var Q = new PriorityQueueClass();
-Q.EnQueue(5);
-Q.EnQueue(10);
-Q.EnQueue(30);
+//Reverse first K elements of Q
+var Q = new QLinkedList();
+Q.Enqueue(1);
+Q.Enqueue(2);
+Q.Enqueue(3);
+Q.Enqueue(4);
+Q.Enqueue(5);
 
-Q.EnQueue(25);
-Q.EnQueue(20);
-
-
-
-Console.WriteLine(Q.DeQueue());
-Console.WriteLine(Q.DeQueue());
-Console.WriteLine(Q.DeQueue());
-Console.WriteLine(Q.DeQueue());
-Console.WriteLine(Q.DeQueue());
-Q.EnQueue(35);
-Q.EnQueue(40);
-Console.WriteLine(Q.DeQueue());
-Console.WriteLine(Q.DeQueue());
+Console.WriteLine(Q.Dequeue());
+Console.WriteLine(Q.Dequeue());
+Console.WriteLine(Q.Dequeue());
+Console.WriteLine(Q.Dequeue());
 
 
+// var ReversedQ = ReverseUntilKthElement.ReverseUntilK(3, Q);
+// Console.WriteLine("This is over");
