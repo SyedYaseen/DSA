@@ -8,23 +8,16 @@ using DSA.LinkedListDSA;
 using DSA.QueueDSA;
 using DSA.StackClassDSA;
 
-// var charFinder = new FirstNonRepeatedCharacter();
-//
-// Console.WriteLine(charFinder.FindNonRepeatedChar("hello help"));
+// var dict = new DictionaryClass();
+// dict.Put(5, "Yaseen");
+// dict.Put(5, "Angry");
+// dict.Put(1, "Syed");
+// dict.Put(10, "POtato");
+// Console.WriteLine(dict.Get(5));
 
-//Reverse first K elements of Q
-var Q = new QLinkedList();
-Q.Enqueue(1);
-Q.Enqueue(2);
-Q.Enqueue(3);
-Q.Enqueue(4);
-Q.Enqueue(5);
+var repeatChar = new RepeatedCharacter();
+// char[] arr = new[] { 'a', 'b', 'c', 'a', 'b', 'a', 'a' };
+// Console.WriteLine(repeatChar.FindMostRepeatedElement(arr));
 
-Console.WriteLine(Q.Dequeue());
-Console.WriteLine(Q.Dequeue());
-Console.WriteLine(Q.Dequeue());
-Console.WriteLine(Q.Dequeue());
-
-
-// var ReversedQ = ReverseUntilKthElement.ReverseUntilK(3, Q);
-// Console.WriteLine("This is over");
+int[] arrInt = new[] {1, 7, 5, 9, 2, 12, 3};
+Console.WriteLine(repeatChar.CountPairsWithDiff(arrInt, 2));
