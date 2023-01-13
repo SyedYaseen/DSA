@@ -6,6 +6,7 @@ public class TreeClass
 {
     private Node? _root;
     private Node? _current;
+    private List<int> treeTraversalResult = new();
 
     public void Insert(int nodeValue)
     {
@@ -61,46 +62,67 @@ public class TreeClass
         return false;
     }
 
-    public List<int> DepthPreOrder()
+    public List<int> DepthPreOrderTraversal()
     {
-        List<int> result = new List<int>();
-        _current = _root;
-        
-        while(_current != null)
-        {
-            var rootValue = GetValue(_current);
+        treeTraversalResult = new List<int>();
+        DepthPreOrder(_root!);
+        return treeTraversalResult;
+    }
 
-            result.Add(_current.Value);
-            if (_current.LeftChild != null)
+    private void DepthPreOrder(Node node)
+    {
+        if (node != null)
+        {
+            treeTraversalResult.Add(node.Value);
+            if (node?.LeftChild != null) DepthPreOrder(node.LeftChild);
+            if (node?.RightChild != null) DepthPreOrder(node.RightChild);
+        }
+    }
+
+    public List<int> DepthInOrderTraversal()
+    {
+        treeTraversalResult= new List<int>();
+        DepthInOrder(_root!);
+        return treeTraversalResult;
+    }
+
+    private void DepthInOrder(Node node)
+    {
+        if (node != null)
+        {
+
+            if(node.LeftChild != null)
             {
-                GetValue(_current.LeftChild);
+                DepthInOrder(node.LeftChild);
+                if(node.LeftChild == null && node.RightChild == null) 
+                    treeTraversalResult.Add(node.Value);
+
+                if(node.RightChild != null)
+                    DepthInOrder(node.RightChild);
             }
 
+
+
+
+
+            //if (node?.LeftChild != null)
+            //{
+            //    DepthInOrder(node.LeftChild);
+
+            //}
+            //treeTraversalResult.Add(node.Value);
+
+
+
+
+
+            //if (node?.RightChild != null)
+            //{
+            //    DepthInOrder(node.RightChild);
+            //    treeTraversalResult.Add(node.Value);
+            //}
         }
-
-
-        return result;
     }
-
-    public int GetValue(Node root)
-    {
-        var rootValue = root.Value;
-        if(root.LeftChild != null)
-        {
-            GetValue(root.LeftChild);
-
-
-        }
-
-        if(root.RightChild != null)
-        {
-            GetValue(root.RightChild);
-        }
-
-
-        return root.Value;
-    }
-
 
     internal class Node
     {

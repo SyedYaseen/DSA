@@ -25,7 +25,8 @@ using DSA.TreeDS;
 
 var Tree =  new TreeClass();
 //var list = new List<int> {10, 5, 15, 6, 1, 8, 12, 18, 17 };
-var list = new List<int> { 20, 10, 30, 6, 14, 24, 3, 8, 26 };
+//var list = new List<int> { 20, 10, 30, 6, 14, 24, 3, 8, 26 };
+var list = new List<int> { 3, 2, 5 };
 
 foreach (var val in list)
 {
@@ -33,8 +34,8 @@ foreach (var val in list)
 }
 //Console.WriteLine(Tree.Find(5));
 
-
-
+//Tree.DepthPreOrderTraversal();
+Tree.DepthInOrderTraversal();
 
 
 
