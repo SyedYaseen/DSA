@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿
 
 namespace DSA.TreeDS;
 
@@ -7,6 +7,9 @@ public class TreeClass
     private Node? _root;
     private Node? _current;
     private List<int> treeTraversalResult = new();
+    
+    private int _left;
+    private int _right;
 
     public void Insert(int nodeValue)
     {
@@ -90,39 +93,68 @@ public class TreeClass
     {
         if (node != null)
         {
-
-            if(node.LeftChild != null)
-            {
-                DepthInOrder(node.LeftChild);
-                if(node.LeftChild == null && node.RightChild == null) 
-                    treeTraversalResult.Add(node.Value);
-
-                if(node.RightChild != null)
-                    DepthInOrder(node.RightChild);
-            }
-
-
-
-
-
-            //if (node?.LeftChild != null)
-            //{
-            //    DepthInOrder(node.LeftChild);
-
-            //}
-            //treeTraversalResult.Add(node.Value);
-
-
-
-
-
-            //if (node?.RightChild != null)
-            //{
-            //    DepthInOrder(node.RightChild);
-            //    treeTraversalResult.Add(node.Value);
-            //}
+            if(node.LeftChild != null) DepthInOrder(node.LeftChild);
+            treeTraversalResult.Add(node.Value);
+            if (node.RightChild != null) DepthInOrder(node.RightChild);
         }
     }
+
+    public List<int> DepthPostOrderTraversal()
+    {
+        treeTraversalResult = new List<int>();
+        DepthPostOrder(_root!);
+        return treeTraversalResult;
+    }
+
+    private void DepthPostOrder(Node node)
+    {
+        if (node != null)
+        {
+            if (node.LeftChild != null) DepthPostOrder(node.LeftChild);
+            if (node.RightChild != null) DepthPostOrder(node.RightChild);
+            treeTraversalResult.Add(node.Value);
+        }
+    }
+
+
+    public int Height()
+    {
+        if (_root == null) return -1;
+       return Height(_root);
+    }
+
+    private int Height(Node node)
+    {
+        if ((node.LeftChild == null && node.RightChild == null) ) return 0;
+
+        return 1 + Math.Max(
+            Height(node?.LeftChild!), 
+            Height(node?.RightChild!)
+            );
+    }
+
+    public int Min()
+    {
+
+        return Min(_root);
+    }
+
+    private int Min(Node node)
+    {
+        if (node.LeftChild == null) return node.Value;
+
+        var left = Min(node?.LeftChild);
+        
+
+        return Math.Min(node.Value, left);
+    }
+
+}
+
+
+
+
+
 
     internal class Node
     {
@@ -142,4 +174,3 @@ public class TreeClass
     }
 
 
-}
