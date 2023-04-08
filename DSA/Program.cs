@@ -23,22 +23,27 @@ using DSA.TreeDS;
 // int[] arrInt = new[] {1, 7, 5, 9, 2, 12, 3};
 // Console.WriteLine(repeatChar.CountPairsWithDiff(arrInt, 2));
 
-var Tree =  new TreeClass();
+var Tree1 =  new TreeClass();
+var Tree2 =  new TreeClass();
 //var list = new List<int> {10, 5, 15, 6, 1, 8, 12, 18, 17 };
-var list = new List<int> { -5, 20, 10, 30, 6, 14, 24, 3, 8, 26 };
+var list1 = new List<int> { -5, 20, 10, 30, 6, 14, 24, 3, 8, 26};
+var list2 = new List<int> { -5, 20, 10, 30, 6, 14, 24, 3, 8, 26};
 //var list = new List<int> { 3, 2, 5 };
 
-foreach (var val in list)
-{
-    Tree.Insert(val);
-}
-//Console.WriteLine(Tree.Find(5));
+list1.ForEach(item => Tree1.Insert(item));
+list2.ForEach(item => Tree2.Insert(item));
 
+
+//Console.WriteLine(Tree.Find(5));
 //Tree.DepthPreOrderTraversal();
 //Tree.DepthInOrderTraversal();
 //Tree.DepthPostOrderTraversal();
 //Console.WriteLine(Tree.Height());
-Console.WriteLine(Tree.Min());
+// Console.WriteLine(Tree.Min());
+
+Console.WriteLine(Tree1.Equality(Tree2));
+
+
 
 
 

@@ -108,15 +108,14 @@ public class TreeClass
 
     private void DepthPostOrder(Node node)
     {
-        if (node != null)
-        {
-            if (node.LeftChild != null) DepthPostOrder(node.LeftChild);
-            if (node.RightChild != null) DepthPostOrder(node.RightChild);
-            treeTraversalResult.Add(node.Value);
-        }
+        if (node == null) return;
+        
+        DepthPostOrder(node.LeftChild);
+        DepthPostOrder(node.RightChild);
+        treeTraversalResult.Add(node.Value);
+    
     }
-
-
+    
     public int Height()
     {
         if (_root == null) return -1;
@@ -149,14 +148,28 @@ public class TreeClass
         return Math.Min(node.Value, left);
     }
 
+    public bool Equality(TreeClass other)
+    {
+        return Equal(_root, other._root);
+    }
+    
+
+    public bool Equal(Node node1, Node node2)
+    {
+        
+        if (node1 == null && node2 == null) return true;
+        
+        if (node1 != null && node2 != null) return 
+            node1.Value == node2.Value && 
+            Equal(node1.LeftChild, node2.LeftChild) && 
+            Equal(node1.RightChild, node2.RightChild);
+
+        return false;
+    }
+
 }
 
-
-
-
-
-
-    internal class Node
+    public class Node
     {
         public int Value;
         public Node? LeftChild;
@@ -172,5 +185,4 @@ public class TreeClass
             return "Node=" + Value;
         }
     }
-
 
