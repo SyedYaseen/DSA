@@ -167,7 +167,77 @@ public class TreeClass
         return false;
     }
 
+    
+    //Swap root - to mess with binary search tree
+    public void SwapNodes()
+    {
+        var temp = _root.LeftChild;
+        _root.LeftChild = _root.RightChild;
+        _root.RightChild = temp;
+    }
+    
+    public bool isBinarySearchTree()
+    {
+        
+        return isBinarySearchTree(_root, Int32.MinValue, Int32.MaxValue);
+    }
+
+    private bool isBinarySearchTree( Node node, int? min, int? max)
+    {
+        
+        if (node == null) return true;
+        if (node.Value < min || node.Value > max) return false;
+
+        return 
+            isBinarySearchTree(node.LeftChild, min, node.Value - 1) &&
+            isBinarySearchTree(node.RightChild, node.Value + 1, max);
+    }
+
+    private List<int> _nodesAtK = new();
+    public List<int> NodeAtKLevel(int k)
+    {
+        NodeAtKLevelRec(_root, k);
+        return _nodesAtK;
+    }
+    private void NodeAtKLevelRec(Node node, int count)
+    {
+        if(node == null) return;
+        
+        if (count == 0)
+        {
+            _nodesAtK.Add(node.Value);
+    
+            
+            
+            return;
+        }
+
+        if (node.LeftChild != null)
+        {
+        //Adding count-- would reassign count to lesser value and will cause problems on the call below
+            NodeAtKLevelRec(node.LeftChild, count - 1);
+        }
+
+        if (node.RightChild != null)
+        {
+            
+            NodeAtKLevelRec(node.RightChild, count - 1);
+        }
+    }
+    
+    //BreathFirstSearch - this is a mdumb way to do it probably
+    private List<int> breathFirst = new();
+    public void BreadthFirst()
+    {
+        var result = new List<int>();
+        for (int i = 0; i < this.Height(); i++)
+        {
+            var list = NodeAtKLevel(i);
+        }
+    }
 }
+
+
 
     public class Node
     {
