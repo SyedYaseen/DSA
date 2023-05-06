@@ -53,7 +53,10 @@ using DSA.TreeDS;
 // result.ForEach(x => Console.WriteLine(x));
 
 
-var list = new List<int> {10, 5, 15, 6, 1, 8, 12, 18, 17 };
+// var list = new List<int> {10, 5, 15, 6, 1, 8, 12, 18, 17 };
+
+var list = new List<int> { 30, 20, 10 };
 var avl = new AVLTree();
 list.ForEach(x => avl.Insert(x));
-Console.Write("This");
+// avl.Insert(200);
+// Console.Write("This");
