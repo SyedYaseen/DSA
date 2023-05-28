@@ -6,6 +6,8 @@ using System.Xml;
 using DSA.ArrayDSA;
 using DSA.AVLTreeDS;
 using DSA.DictionaryDSA;
+using DSA.GraphDS;
+using DSA.HeapDSA;
 using DSA.LinkedListDSA;
 using DSA.QueueDSA;
 using DSA.StackClassDSA;
@@ -55,8 +57,38 @@ using DSA.TreeDS;
 
 // var list = new List<int> {10, 5, 15, 6, 1, 8, 12, 18, 17 };
 
-var list = new List<int> { 30, 20, 10 };
-var avl = new AVLTree();
-list.ForEach(x => avl.Insert(x));
+// var list = new List<int> {10, 20, 30 };
+// var avl = new AVLTree();
+// list.ForEach(x => avl.Insert(x));
 // avl.Insert(200);
-// Console.Write("This");
+
+
+var heap = new HeapClass();
+
+// heap.Insert(15);
+// heap.Insert(10);
+// heap.Insert(3);
+// heap.Insert(8);
+// heap.Insert(12);
+//
+// heap.Insert(9);
+// heap.Insert(4);
+// heap.Insert(1);
+// heap.Insert(24);
+
+heap.Insert(10);
+heap.Insert(5);
+  heap.Insert(17);
+heap.Insert(4);
+heap.Insert(22);
+
+heap.Remove();
+// List<int> heapList = new List<int> { 4, 1, 24};
+//
+// heapList.ForEach(el => heap.Insert(el));
+
+heap._heap.ForEach(el => Console.WriteLine(el));
+Console.Write("This");
+
+
+
