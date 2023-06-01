@@ -63,7 +63,7 @@ using DSA.TreeDS;
 // avl.Insert(200);
 
 
-var heap = new HeapClass();
+// var heap = new HeapClass();
 
 // heap.Insert(15);
 // heap.Insert(10);
@@ -76,18 +76,23 @@ var heap = new HeapClass();
 // heap.Insert(1);
 // heap.Insert(24);
 
-heap.Insert(10);
-heap.Insert(5);
-  heap.Insert(17);
-heap.Insert(4);
-heap.Insert(22);
-
-heap.Remove();
+// heap.Insert(10);
+// heap.Insert(5);
+//   heap.Insert(17);
+// heap.Insert(4);
+// heap.Insert(22);
+//
+// heap.Remove();
 // List<int> heapList = new List<int> { 4, 1, 24};
 //
 // heapList.ForEach(el => heap.Insert(el));
 
-heap._heap.ForEach(el => Console.WriteLine(el));
+// heap._heap.ForEach(el => Console.WriteLine(el));
+
+
+var heapify = new Heapify();
+heapify.DoHeap().ForEach(el => Console.WriteLine(el));
+
 Console.Write("This");
 
 
