@@ -32,13 +32,9 @@ public class AVLTree
         return current;
         
     }
-
     
     private Node Balance(Node current)
     {
-        //         50
-        //     30
-        // 20
         if (BalanceFactor(current) > 1)
         {
             Console.WriteLine(current.Value + " is left heavy");
@@ -68,10 +64,8 @@ public class AVLTree
             Console.WriteLine("Left rotate " + current.Value);
             return LeftRotation(current);
         }
-
         return current;
     }
-
 
     private Node LeftRotation(Node root)
     {
