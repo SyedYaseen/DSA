@@ -4,13 +4,9 @@
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=NamingFilter/@EntryIndexedValue">On</s:String>
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=CodeStyle/@EntryIndexedValue">On</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1043d7b9_002D7595_002D4abe_002D9067_002Db2ba9f57b60e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;And&gt;&#xD;
-    &lt;TestAncestor&gt;&#xD;
-      &lt;TestId&gt;xUnit::477D5CA9-5D4E-45A3-9399-0EA8B5BDBCA6::net6.0::LCTests.TrapWaterTests.TrapWater.TrapWater(expected: 1, nums: [1, 0, 2])&lt;/TestId&gt;&#xD;
-    &lt;/TestAncestor&gt;&#xD;
-    &lt;Project Location="C:\Users\Syed Yaseen\Documents\Projects\DSA\LCTests" Presentation="&amp;lt;LCTests&amp;gt;" /&gt;&#xD;
-    &lt;Namespace&gt;LCTests&lt;/Namespace&gt;&#xD;
-  &lt;/And&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::AB01398D-0C51-4311-A5AA-88AAB9D52DEE::net6.0::LCTests.TrapWaterTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	
 	

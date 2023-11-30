@@ -15,7 +15,11 @@ using DSA.TreeDS;
 using DSA.Leetcode;
 
 
-var Soln = new InsertPosition();
+var Soln = new ValidAnagram();
+Console.WriteLine(Soln.IsAnagram("anagram", "nagaram"));
+Console.WriteLine(Soln.IsAnagram("aacc", "aaac"));
+Console.WriteLine(Soln.IsAnagram("cat", "rat"));
+Console.WriteLine(Soln.IsAnagram("ab", "a"));
 
 // System.Console.WriteLine(Soln.InsertPos(nums, 4));
 // var dict = new DictionaryClass();
