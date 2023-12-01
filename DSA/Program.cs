@@ -14,12 +14,23 @@ using DSA.StackClassDSA;
 using DSA.TreeDS;
 using DSA.Leetcode;
 
+// var Soln = new ValidAnagram();
+// Console.WriteLine(Soln.isAnagram("ba", "ab"));
+// Console.WriteLine(Soln.isAnagram("rat", "car"));
+var Soln = new GroupAnagramsSoln();
+var ans = Soln.GroupAnagrams(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
 
-var Soln = new ValidAnagram();
-Console.WriteLine(Soln.IsAnagram("anagram", "nagaram"));
-Console.WriteLine(Soln.IsAnagram("aacc", "aaac"));
-Console.WriteLine(Soln.IsAnagram("cat", "rat"));
-Console.WriteLine(Soln.IsAnagram("ab", "a"));
+Console.WriteLine(Soln.GroupAnagrams(new string[] {""}));
+var ans1 = Soln.GroupAnagrams(new string[] { "ac", "c" });
+// var ans1 = Soln.GroupAnagrams(new string[] { "" });
+Console.WriteLine("This");
+
+// Console.WriteLine(Soln.GroupAnagrams(new string[] {"a"}));
+// Console.WriteLine(Soln.GroupAnagrams(new string[] {"eat","tea","tan","ate","nat","bat"}));
+
+
+
+
 
 // System.Console.WriteLine(Soln.InsertPos(nums, 4));
 // var dict = new DictionaryClass();
