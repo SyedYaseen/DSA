@@ -3,6 +3,30 @@
 public class GroupAnagramsSoln {
     public IList<IList<string>> GroupAnagrams(string[] strs)
     {
+        Dictionary<string, List<string>> mem = new Dictionary<string, List<string>>();
+        for (int i = 0; i < strs.Length; i++)
+        {
+
+            string current = SortString(strs[i]);
+            if (mem.ContainsKey(current))
+                mem[current].Add(strs[i]);
+            else
+                mem.Add(current, new List<string>{strs[i]});
+        }
+        
+        return new List<IList<string>>(mem.Values);
+    }
+    
+    static string SortString(string input)
+    {
+        char[] characters = input.ToArray();
+        Array.Sort(characters);
+        return new string(characters);
+    }
+
+
+    public IList<IList<string>> GroupAnagrams2(string[] strs)
+    {
         IList<IList<string>> result = new List<IList<string>>();
         List<string> strss = strs.ToList();
         
