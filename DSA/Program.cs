@@ -3,14 +3,16 @@
 using DSA.Leetcode;
 using DSA.Leetcode.Medium;
 
-// var Soln = new ValidAnagram();
-var cl = new ProductExceptSelf();
-var a = cl.Soln(new int[] { 1, 2, 3, 4 });
-// [1, 2, 6, 24]
-// [24, 24, 12, 4]
+var cl = new EncodeAndDecodeStrings();
 
-// [24, 12, 8, 6]
+var inputs = new List<List<string>>()
+{
+    new List<string>() {"neet","code","love","you"},
+    new List<string>() { "we", "say", ":", "yes" }
 
-var b = cl.Soln(new int[] { -1, 1, 0, -3, 3 });
-// [0,0,9,0,0]
+};
 
+foreach (var i in inputs)
+{
+    cl.Soln(i);
+}
