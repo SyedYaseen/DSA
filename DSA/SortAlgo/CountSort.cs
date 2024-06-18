@@ -4,8 +4,6 @@
     {
         public int[] Srt(int[] nums)
         {
-            var result = new int[nums.Length];
-
             var highest = int.MinValue;
             for (int i = 0; i < nums.Length; i++)
             {
@@ -19,11 +17,18 @@
                 freq[nums[i]]++;
             }
 
-            for(int i=0; i < highest; i++)
+            int j = 0;
+
+            for(int i=0; i < freq.Length; i++)
             {
-                for(int j = freq[i]; j > 0; j--)
+                if (freq[i] != 0)
                 {
-                    result[i] = i;
+                    while (freq[i] > 0)
+                    {
+                        nums[j] = i;
+                        freq[i]--;
+                        j++;
+                    }
                 }
             }
             // Create array that has size of largest value in arr
@@ -31,9 +36,7 @@
             // Index = value of the number - Value = freq
             // Iterate through the arr and place the numbers on result
 
-
-
-            return result;
+            return nums;
         }
     }
 }
