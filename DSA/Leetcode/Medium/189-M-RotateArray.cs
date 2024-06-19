@@ -1,4 +1,5 @@
 ﻿
+
 namespace DSA.Leetcode.Medium
 {
     public class RotateArray
@@ -7,16 +8,21 @@ namespace DSA.Leetcode.Medium
         //O(1) extra space
         public void Soln(int[] nums, int k)
         {
-            Reverse(nums);
-            var a = nums;
-
+            Reverse(nums, 0, nums.Length - 1, GetMiddle(nums.Length));
+            Reverse(nums, 0, k - 1, GetMiddle(k));
+            Reverse(nums, k , nums.Length - 1, k + GetMiddle(nums.Length - k));
         }
 
-        public void Reverse(int[] nums)
+        public int GetMiddle(int num)
         {
-            for (int i = 0; i < nums.Length; i++)
+            return (int)Math.Floor((decimal)num / 2);
+        }
+
+        public void Reverse(int[] nums, int start, int end, int middle)
+        {
+            for (int i = start; i < middle; i++)
             {
-                int lastIndex = nums.Length - 1 - i;
+                int lastIndex = end--;
                 int temp = nums[i];
                 nums[i] = nums[lastIndex];
                 nums[lastIndex] = temp;
