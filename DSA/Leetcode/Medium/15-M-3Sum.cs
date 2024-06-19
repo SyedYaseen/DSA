@@ -1,33 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA.Leetcode.Medium
+﻿namespace DSA.Leetcode.Medium
 {
     public class ThreeSum
     {
         public IList<IList<int>> Soln(int[] nums)
         {
-            
             var result = new List<IList<int>>();
             Array.Sort(nums);
             for (int k = 0; k < nums.Length; k++)
             {
                 if (k > 0 && nums[k - 1] == nums[k]) continue;
                 
-                int i = 0;
+                int i = k + 1; // So that I never need to start with the same item again. Will create duplicate values
                 int j = nums.Length - 1;
 
                 while (i < j)
                 {
-                    if (j == k || nums[i] + nums[j] + nums[k] > 0) j--;
+                    if (nums[i] + nums[j] + nums[k] > 0) j--;
                     else if (i == k || nums[i] + nums[j] + nums[k] < 0) i++;
                     else 
                     {
                         result.Add([nums[i], nums[j], nums[k]]);
-                        break;
+
+                        // Once this is complete, we move i, I dunno why - that rhymed, should've become a poet!
+                        // Previously I had a break statement here, that would break once only one triplet for that k value is found
+                        // Instead we want to exhaust every combo for i
+                        // Even if j decreases to accomodate sum > 0, its fine because its a sorted array and for that combination, its not possible to get the sum = 0 
+                        i++;
+                        while (nums[i] == nums[i - 1] && i < j) i++;
                     }
                 }
             }
