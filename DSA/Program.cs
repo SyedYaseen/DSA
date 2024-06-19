@@ -2,6 +2,7 @@
 
 using DSA.Leetcode;
 using DSA.Leetcode.Easy;
+using DSA.Leetcode.Hard;
 using DSA.Leetcode.Medium;
 using DSA.SortAlgo;
 using System.Collections.Generic;
@@ -47,16 +48,18 @@ using System.Numerics;
 
 
 
-var cl = new ThreeSum();
+var cl = new TrappingRainWater();
 
-//var a= cl.Soln([-1, 0, 1, 2, -1, -4]); // [-1,0,1] and [-1,-1,2]
-//var b = cl.Soln([0, 1, 1]); // []
-//var c = cl.Soln([0, 0, 0]); // 0
-//var d = cl.Soln([1, 2, -2, -1]); // []
-var e = cl.Soln([-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4]);
+
+var a = cl.Soln([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]); // 6
+var b = cl.Soln([4, 2, 0, 3, 2, 5]); // 9
+
 var f = "1";
-// [-4,-3,-2,-1,-1,0,0,1,2,3,4]
-// [[-4,0,4],[-4,1,3],[-3,-1,4],[-3,0,3],[-3,1,2],[-2,-1,3],[-2,0,2],[-1,-1,2],[-1,0,1]]
-// [-4,0,4] ,[-2,-1,3]
-// [-3,-1,4], [-1,-1,2]
 
+ 
+ MinStack obj = new MinStack();
+ obj.Push(val);
+ obj.Pop();
+ int param_3 = obj.Top();
+ int param_4 = obj.GetMin();
+ 
