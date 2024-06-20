@@ -53,9 +53,12 @@ using System.Numerics;
 //var a = cl.Soln([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]); // 6
 // var b = cl.Soln([4, 2, 0, 3, 2, 5]); // 9
 
-var cl = new ValidParentheses();
+var cl = new DailyTemperatures();
 
-//var a = cl.Soln("()"); 
-//var b = cl.Soln("()[]{}");
-var b = cl.Soln("))");
+var a = cl.Soln([73, 74, 75, 71, 69, 72, 76, 73]);
+//[1,1,4,2,1,1,0,0]
+var b = cl.Soln([30, 40, 50, 60]);
+//[1, 1, 1, 0]
+var c = cl.Soln([30, 60, 90]);
+// [1,1,0]
 var f = 'a';
