@@ -48,18 +48,14 @@ using System.Numerics;
 
 
 
-var cl = new TrappingRainWater();
-
+// var cl = new TrappingRainWater();
 
 //var a = cl.Soln([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]); // 6
-var b = cl.Soln([4, 2, 0, 3, 2, 5]); // 9
+// var b = cl.Soln([4, 2, 0, 3, 2, 5]); // 9
 
-var f = "1";
+var cl = new ValidParentheses();
 
- 
- //MinStack obj = new MinStack();
- //obj.Push(val);
- //obj.Pop();
- //int param_3 = obj.Top();
- //int param_4 = obj.GetMin();
- 
+//var a = cl.Soln("()"); 
+//var b = cl.Soln("()[]{}");
+var b = cl.Soln("))");
+var f = 'a';
