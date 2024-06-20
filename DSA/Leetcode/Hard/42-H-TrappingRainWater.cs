@@ -11,35 +11,50 @@ namespace DSA.Leetcode.Hard
         public int Soln(int[] height)
         {
             int result = 0;
-            int i = 0;
-            int j = 1;
-            bool left = false;
-            // Make sure there is a wall to the left and to the right 
-            // Find pockets 
-            // Area = Min(height[j], height[i]) * (j - i) - current sections black boxes
-            // If i and j are one block away move j
-            // If i isnt on wall iterate until wall is reached to get to next section
+            int l = 0;
+            int r = 1;
+            int lastIndex = height.Length;
 
-            // To get to each section, 
+            // Initial l needs to be incremented until the next item
+            // is not higher than the current one
 
-
-            while (j < height.Length)
+            while (r < lastIndex)
             {
-                while (!left)
+                while (l + 1 < lastIndex)
                 {
-                    i++;
-                    left = true;
+                    if (height[l + 1] < height[l]) { r = l + 1; break; }
+                    else l++;
                 }
 
-                if (j == i + 1) j++;
+                /* 
+                 After l is found, inc r until value increases for r compared to previous value
+                 Also incrase r if its right next to l, because water can exist there
+                */
+                int blocks = 0;
+                while (r + 1 < lastIndex)
+                {
 
-                else (height[i] == 0) i++;
-                
-                
+                    if (height[r + 1] < height[r]) // height[r] < height[l] &&
+                    {
+                        blocks += height[r];
+                        r++;
+                    }
+                    else
+                    {
+                        r++;
+                        int maxWallSize = Math.Min(height[l], height[r]);
+                        blocks += maxWallSize;
+                        result = ((r - l) * maxWallSize) - blocks;
+
+                        // set new l value for next set
+                        l = r;
+                        blocks = 0;
+                        continue;
+                    }
+                }
+
+                //return result;
             }
-
-
-
             return result;
         }
     }
