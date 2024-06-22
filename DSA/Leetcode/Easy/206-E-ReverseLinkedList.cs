@@ -7,19 +7,16 @@ namespace DSA.Leetcode.Easy
         public Node Soln(Node head)
         {
             if (head._next == null) return head;
-            Node current = head;
+            Node node = null;
                          
-            while (current._next != null)
+            while (head != null)
             {
-                // current's next points to
-                current._next = 
-
-
+                var temp = head._next;
+                head._next = node;
+                node = head;
+                head = temp;
             }
-            var a = head.GetValue();
-            var b= head._next.GetValue();
-
-            return head;
+            return node;
         }
     }
 }

@@ -4,7 +4,6 @@ using DSA.Leetcode;
 using DSA.Leetcode.Easy;
 using DSA.Leetcode.Hard;
 using DSA.Leetcode.Medium;
-using DSA.LinkedListDSA;
 using DSA.SortAlgo;
 using System.Collections.Generic;
 using System.Numerics;
@@ -64,12 +63,11 @@ using System.Numerics;
 //var f = 'a';
 
 
-var ll = new LinkedListClass();
-ll.AddFirst(1);
-ll.AddLast(2);
-ll.AddLast(3);
-ll.AddLast(4);
-ll.AddLast(5);
 
-var cl = new ReverseLinkedList();
-cl.Soln(ll.First);
+ListNode ll1 = new ListNode(1, new ListNode(2, new ListNode(4)));
+ListNode ll2 = new ListNode(1, new ListNode(3, new ListNode(5)));
+
+
+var cl = new MergeTwoSortedLists();
+cl.Soln(ll1, ll2);
+var f = "a";
