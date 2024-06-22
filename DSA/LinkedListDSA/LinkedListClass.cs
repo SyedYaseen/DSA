@@ -2,24 +2,26 @@ using System.Xml;
 
 namespace DSA.LinkedListDSA;
 
+public class Node
+{
+    private int _value;
+    public Node? _next;
+
+    public Node(int value)
+    {
+        _value = value;
+    }
+
+    public int GetValue()
+    {
+        return _value;
+    }
+
+}
+
 public class LinkedListClass
 {
-    public class Node
-    {
-        private int _value;
-        public Node? _next;
 
-        public Node(int value)
-        {
-            _value = value;
-        }
-
-        public int GetValue()
-        {
-            return _value;
-        }
-
-    }
     int result;
     public Node? First;
     public Node? Last;

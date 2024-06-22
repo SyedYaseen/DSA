@@ -4,6 +4,7 @@ using DSA.Leetcode;
 using DSA.Leetcode.Easy;
 using DSA.Leetcode.Hard;
 using DSA.Leetcode.Medium;
+using DSA.LinkedListDSA;
 using DSA.SortAlgo;
 using System.Collections.Generic;
 using System.Numerics;
@@ -53,11 +54,22 @@ using System.Numerics;
 //var a = cl.Soln([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]); // 6
 // var b = cl.Soln([4, 2, 0, 3, 2, 5]); // 9
 
-var cl = new MedianOfTwoSortedArrays();
+//var cl = new MedianOfTwoSortedArrays();
 
-var a = cl.Soln([1, 3], [2]);
-var b = cl.Soln([1, 2], [3, 4]);
-var c = cl.Soln([1, 2, 4, 5], [3]);
-var d = cl.Soln([-5, 3, 6, 12, 15],[-12, -10, -6, -3, 4, 10]);
-//var c = cl.Soln([1], 0);
-var f = 'a';
+//var a = cl.Soln([1, 3], [2]);
+//var b = cl.Soln([1, 2], [3, 4]);
+//var c = cl.Soln([1, 2, 4, 5], [3]);
+//var d = cl.Soln([-5, 3, 6, 12, 15],[-12, -10, -6, -3, 4, 10]);
+////var c = cl.Soln([1], 0);
+//var f = 'a';
+
+
+var ll = new LinkedListClass();
+ll.AddFirst(1);
+ll.AddLast(2);
+ll.AddLast(3);
+ll.AddLast(4);
+ll.AddLast(5);
+
+var cl = new ReverseLinkedList();
+cl.Soln(ll.First);
