@@ -53,16 +53,11 @@ using System.Numerics;
 //var a = cl.Soln([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]); // 6
 // var b = cl.Soln([4, 2, 0, 3, 2, 5]); // 9
 
-var cl = new DailyTemperatures();
+var cl = new MedianOfTwoSortedArrays();
 
-var a = cl.Soln([73, 74, 75, 71, 69, 72, 76, 73]);
-//[1,1,4,2,1,1,0,0]
-var b = cl.Soln([30, 40, 50, 60]);
-//[1, 1, 1, 0]
-var c = cl.Soln([30, 60, 90]);
-// [1,1,0]
-var d = cl.Soln([99, 99, 99]);
-
-var e = cl.Soln([89, 62, 70, 58, 47, 47, 46, 76, 100, 70]);
-// [8,1,5,4,3,2,1,1,0,0]
+var a = cl.Soln([1, 3], [2]);
+var b = cl.Soln([1, 2], [3, 4]);
+var c = cl.Soln([1, 2, 4, 5], [3]);
+var d = cl.Soln([-5, 3, 6, 12, 15],[-12, -10, -6, -3, 4, 10]);
+//var c = cl.Soln([1], 0);
 var f = 'a';
