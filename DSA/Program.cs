@@ -66,9 +66,11 @@ using System.Numerics;
 
 ListNode ll1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
 ListNode ll2 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+ListNode ll3 = new ListNode(1, new ListNode(2)); 
 
 
-var cl = new ReroderLinkedList();
-cl.Soln(ll1);
-cl.Soln(ll2);
+var cl = new RemoveKthFromLastLinkedList();
+cl.Soln(ll1, 2);
+cl.Soln(ll2, 2);
+cl.Soln(ll3, 1);
 var f = "a";
