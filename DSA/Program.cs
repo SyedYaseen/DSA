@@ -76,9 +76,9 @@ ListNode ll4 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9)))
 ListNode ll5 = new ListNode(2, new ListNode(4, new ListNode(9)));
 ListNode ll6 = new ListNode(5, new ListNode(6, new ListNode(4, new ListNode(9))));
 var cl = new AddTwoNumsLinkedList();
-//cl.Soln(ll1, ll2); //[2]
-cl.Soln(ll3, ll4);
-cl.Soln(ll5, ll6);
+//var a= cl.Soln(ll1, ll2); //[2]
+//var  b = cl.Soln(ll3, ll4);
+var c = cl.Soln(ll5, ll6);
 //cl.Soln(ll1, 2);
 //cl.Soln(ll2, 2);
 //cl.Soln(ll3, 1);
