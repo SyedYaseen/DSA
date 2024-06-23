@@ -64,10 +64,11 @@ using System.Numerics;
 
 
 
-ListNode ll1 = new ListNode(1, new ListNode(2, new ListNode(4)));
-ListNode ll2 = new ListNode(1, new ListNode(3, new ListNode(5)));
+ListNode ll1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
+ListNode ll2 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
 
 
-var cl = new MergeTwoSortedLists();
-cl.Soln(ll1, ll2);
+var cl = new ReroderLinkedList();
+cl.Soln(ll1);
+cl.Soln(ll2);
 var f = "a";
