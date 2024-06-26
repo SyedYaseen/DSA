@@ -20,23 +20,45 @@ let str = ["pwwkew", "abcabcbb", "dvdf", "bbbb", ""]
 // str = ["pwwkew"]
 // str = ["bbbb"]
 
+// const sub = (s) => {
+//   let result = 0
+//   i = 0
+//   j = 0
+//   hash = []
+
+//   while (j < s.length) {
+//     let firstDuplicateIndex = hash.indexOf(s[j])
+//     if (firstDuplicateIndex === -1) {
+//       hash.push(s[j])
+//       if (result < hash.length) result = hash.length
+//       j += 1
+//     } else {
+//       hash = hash.slice(firstDuplicateIndex + 1)
+//       i += 1
+//     }
+//   }
+//   return result
+// }
+
 const sub = (s) => {
   let result = 0
-  i = 0
-  j = 0
-  hash = []
+  let h = []
+
+  let i = 0
+  let j = 0
 
   while (j < s.length) {
-    let firstDuplicateIndex = hash.indexOf(s[j])
-    if (firstDuplicateIndex === -1) {
-      hash.push(s[j])
-      if (result < hash.length) result = hash.length
-      j += 1
+    let duplicateIndex = h.indexOf(s[j])
+
+    if (duplicateIndex == -1) {
+      h.push(s[j])
+      if (h.length > result) result = h.length
+      j++
     } else {
-      hash = hash.slice(firstDuplicateIndex + 1)
-      i += 1
+      h = h.slice(duplicateIndex + 1)
     }
   }
+
   return result
 }
 

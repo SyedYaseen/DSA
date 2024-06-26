@@ -64,23 +64,31 @@ using System.Numerics;
 
 
 
-ListNode ll1 = new ListNode(2, new ListNode(4, new ListNode(3)));
-ListNode ll2 = new ListNode(5, new ListNode(6, new ListNode(4)));
-ListNode ll3 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9,
-    new ListNode(9, new ListNode(9, new ListNode(9)))))));
-ListNode ll4 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9))));
+//ListNode ll1 = new ListNode(2, new ListNode(4, new ListNode(3)));
+//ListNode ll2 = new ListNode(5, new ListNode(6, new ListNode(4)));
+//ListNode ll3 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9,
+//    new ListNode(9, new ListNode(9, new ListNode(9)))))));
+//ListNode ll4 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9))));
 
-// 249
-// 5649
+//// 249
+//// 5649
 
-ListNode ll5 = new ListNode(2, new ListNode(4, new ListNode(9)));
-ListNode ll6 = new ListNode(5, new ListNode(6, new ListNode(4, new ListNode(9))));
-var cl = new AddTwoNumsLinkedList();
-//var a= cl.Soln(ll1, ll2); //[2]
-//var  b = cl.Soln(ll3, ll4);
-var c = cl.Soln(ll5, ll6);
+//ListNode ll5 = new ListNode(2, new ListNode(4, new ListNode(9)));
+//ListNode ll6 = new ListNode(5, new ListNode(6, new ListNode(4, new ListNode(9))));
+//var cl = new AddTwoNumsLinkedList();
+////var a= cl.Soln(ll1, ll2); //[2]
+////var  b = cl.Soln(ll3, ll4);
+//var c = cl.Soln(ll5, ll6);
+////cl.Soln(ll1, 2);
+////cl.Soln(ll2, 2);
+////cl.Soln(ll3, 1);
+
+//var f = "a";
+
+var cl = new FindDuplicateNumber();
+var a = cl.Soln([1, 3, 4, 2, 2]);
+var b = cl.Soln([3, 1, 3, 4, 2]);
+var c = cl.Soln([3, 3, 3, 3, 3]);
 //cl.Soln(ll1, 2);
 //cl.Soln(ll2, 2);
 //cl.Soln(ll3, 1);
-
-var f = "a";
