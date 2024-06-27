@@ -2,10 +2,52 @@
 //
 
 #include <iostream>
+#include <string>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+    // In out
+    //string firstName;
+    //string lastName;
+
+    //cout << "Enter your first name: ";
+    //getline(cin, firstName);
+
+    //cout << "Enter your last name:";
+    //getline(cin, lastName);
+    //cout << firstName + " " << lastName << endl;
+
+    // Pointers
+    // & before a variable shows the memory address - this is a pointer and can be assigned to data type of pointer
+    // * before a memory address (i.e.) a pointer deferences it and gives the value on that address. 
+    // 
+    int age = 30;
+    int* agePointer = &age; // A pointer to the memory location of age variable
+    int ageDeref = *agePointer; // Putting star before pointer dereference the pointer and shows the value in memory pointed by the pointer
+    
+    int& ageRef = age;
+    int* pAgeRef = &ageRef;
+    ageRef = 27;
+
+
+    //cout << "age " << age << endl; 
+    //cout << "age* " << &age << endl;
+    //cout << "age* " << *&age << endl;
+    //cout << "agePointer " << agePointer << endl;
+    //cout << "ageDeref " << ageDeref << endl;
+    //cout << "ageDeref& " << &ageDeref << endl;
+    //cout << "ageRef " << ageRef << endl;
+    //cout << "pAgeRef " << pAgeRef << endl;
+
+    int a = 5;
+    int& aAmber = a;
+    int* aPtr = &a;
+
+    cout << "int& a: " << aAmber << endl;
+    cout << "aPtr: " << aPtr << endl;
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
