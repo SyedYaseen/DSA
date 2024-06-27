@@ -85,10 +85,9 @@ using System.Numerics;
 
 //var f = "a";
 
-var cl = new FindDuplicateNumber();
-var a = cl.Soln([1, 3, 4, 2, 2]);
-var b = cl.Soln([3, 1, 3, 4, 2]);
-var c = cl.Soln([3, 3, 3, 3, 3]);
+var cl = new LongestRepeatingCharacterReplacement();
+var a = cl.Soln("ABAB", 2);
+var b = cl.Soln("AABABBA", 1);
 //cl.Soln(ll1, 2);
 //cl.Soln(ll2, 2);
 //cl.Soln(ll3, 1);

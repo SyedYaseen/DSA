@@ -28,7 +28,7 @@ namespace DSA.Leetcode.Medium
                         // Instead we want to exhaust every combo for i
                         // Even if j decreases to accomodate sum > 0, its fine because its a sorted array and for that combination, its not possible to get the sum = 0 
                         i++;
-                        while (nums[i] == nums[i - 1] && i < j) i++;
+                        while (nums[i] == nums[i - 1] && i < j) i++; // to avoid duplicates
                     }
                 }
             }
