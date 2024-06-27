@@ -86,8 +86,8 @@ using System.Numerics;
 //var f = "a";
 
 var cl = new LongestRepeatingCharacterReplacement();
-var a = cl.Soln("ABAB", 2);
-var b = cl.Soln("AABABBA", 1);
+var a = cl.Soln("ABAB", 2); //4
+var b = cl.Soln("AABABBA", 1); //4
 //cl.Soln(ll1, 2);
 //cl.Soln(ll2, 2);
 //cl.Soln(ll3, 1);
