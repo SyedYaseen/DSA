@@ -22,7 +22,10 @@ int main()
     // Pointers
     // & before a variable shows the memory address - this is a pointer and can be assigned to data type of pointer
     // * before a memory address (i.e.) a pointer deferences it and gives the value on that address. 
-    // 
+    
+    // int& declares references to a value e.g. int a = 5; int& b = a; b = 10; will change value of a and b to 10 becuase both refer to the same memory location.
+    // if we do int a = 5; int b = a; there are two memory allocations created, changing values on either will not affect the other
+
     int age = 30;
     int* agePointer = &age; // A pointer to the memory location of age variable
     int ageDeref = *agePointer; // Putting star before pointer dereference the pointer and shows the value in memory pointed by the pointer
@@ -44,19 +47,100 @@ int main()
     int a = 5;
     int& aAmber = a;
     int* aPtr = &a;
+    int* aAmberPtr = &aAmber;
 
-    cout << "int& a: " << aAmber << endl;
-    cout << "aPtr: " << aPtr << endl;
+    //cout << "int& a: " << aAmber << endl;
+    //cout << "aPtr: " << aPtr << endl;
+    //cout << "aAmberPtr: " << aAmberPtr << endl;
+
+    int b = a;
+    int& c = a;
+    b = 10;
+    c = 15;
+    //cout << "a: " << a << endl;
+    //cout << "b: " << b << endl;
+    //cout << "int& a: " << &a << endl;
+    //cout << "int& b: " << &b << endl;
+    //cout << "int& c: " << &c << endl;
+
+    // Arr and pointers
+
+    int myArr[5];
+    myArr[0] = 1;
+    myArr[1] = 2;
+
+    int* myAp = myArr;
+    
+    //*myAp = 15;
+    //myAp++;
+    //myAp++;
+    //myAp++;
+    //*myAp = 200;
+    
+    
+    //cout << "ar: " << myArr[0] << endl;
+    //cout << "ar: " << myArr[1] << endl;
+    //cout << "ar: " << myArr[2] << endl;
+    //cout << "ar: " << myArr[3] << endl;
+    //cout << "ar: " << *myAp << endl; // Shows value, because that start before the pionter dereferences the value
+    //cout << "ar: " << myAp << endl; // Shows pointer address
+    
+
+    // Size check
+    //printf("Size of short int is: %ld bytes = %ld bits \n", sizeof(short int), sizeof(short int) * 8);
+    //printf("Size of int is: %ld bytes = %ld bits \n", sizeof(int), sizeof(int) * 8);
+    //printf("Size of long int is: %ld bytes = %ld bits \n", sizeof(long int), sizeof(long int) * 8);
+    //printf("Size of long long int is: %ld bytes = %ld bits \n", sizeof(long long int), sizeof(long long int) * 8);
+    //printf("Size of char is: %ld bytes = %ld bits \n", sizeof(char), sizeof(char) * 8);
+    //printf("Size of string is: %ld bytes = %ld bits \n", sizeof(string), sizeof(string) * 8);
+
+
+    // Conditionals and loops
+    int i = 0;
+
+    //while (i < 5) {
+    //    cout << *myAp << endl;
+    //    myAp++; // by incrementing the pointer
+    //    i++;
+    //}
+
+    //while (i < 5) {
+    //    cout << myArr[i] << endl;
+    //    i++;
+    //}
+    
+    //for (int i = 0; i < 5; i++)
+    //{
+    //    cout << myArr[i] << endl;
+    //}
+
+    char name[] = "yaseen"; // all strings have a 0 at the end when they compile, thats how they determine that a string is over
+    char nameAsArr[] = { 'y', 'a', 's', 'e', 'e', 'n', 0 }; 
+    
+    //using int
+    //for (int i = 0; i < name[i] != 0; i++) // value 0, false, NULL == false, anything other than this is a true value
+    //{
+    //    cout << name[i] << endl;
+    //}
+
+    // using pointer - init pointer to start of arr; check if deref'd pointer is not 0; increment pointer
+    for (char *cp = name; *cp != 0; cp++) // value 0, false, NULL == false, anything other than this is a true value
+    {
+        cout << *cp << endl;
+    }
+
+
+    try
+    {
+        int* myP = new int[10000];
+         
+    }
+    catch (...)
+    {
+        printf("Failed malloc");
+    }
+    delete[] myP; // remove memory to prevent memory leaks
+
     return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
