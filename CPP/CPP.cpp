@@ -126,20 +126,50 @@ int main()
     // using pointer - init pointer to start of arr; check if deref'd pointer is not 0; increment pointer
     for (char *cp = name; *cp != 0; cp++) // value 0, false, NULL == false, anything other than this is a true value
     {
-        cout << *cp << endl;
+        //cout << *cp << endl;
     }
 
+    int* myP;
 
     try
     {
-        int* myP = new int[10000];
+        myP = new int[10000];
+
+        delete[] myP; // after op complete remove memory to prevent memory leaks
          
     }
     catch (...)
     {
         printf("Failed malloc");
     }
-    delete[] myP; // remove memory to prevent memory leaks
+    
+
+    // structs
+    struct Emp {
+        const int uid;
+        const char* name;
+        int course_count;
+    };
+
+    Emp yaseen = { 001, "Yaseen", 1 };
+    Emp bismi = { 002, "Almas", 1 };
+    // Can change the name even though its const, because it points to 
+    // the pointer and we can change the value
+    // in the address but not the address itself.
+    yaseen.name = "Syed";
+    Emp* bPtr = &bismi;
+
+    printf(yaseen.name);
+    printf("\n");
+    printf(bPtr->name); // access pointer with "->"
+
+
+
+
+
+
+
+
 
     return 0;
 }
