@@ -5,6 +5,14 @@
 #include <string>
 using namespace std;
 
+void incByValue(int val) {
+    val++;
+}
+
+void incByReference(int* ptrVal) {
+    ++(*ptrVal);
+}
+
 int main()
 {
 
@@ -159,10 +167,27 @@ int main()
     yaseen.name = "Syed";
     Emp* bPtr = &bismi;
 
-    printf(yaseen.name);
-    printf("\n");
-    printf(bPtr->name); // access pointer with "->"
+    //printf(yaseen.name);
+    //printf("\n");
+    //printf(bPtr->name); // access pointer with "->"
 
+
+    // enums
+
+    enum cars {
+        lexus, // returns 0
+        camry, //returns 1
+        corolla // return 2
+    };
+
+    //cout << corolla;
+
+    // call by value, call by reference
+    int anotherNum = 5;
+    incByValue(anotherNum);
+    cout << "Inc by value wont increment" << anotherNum << endl;
+    incByReference(&anotherNum);
+    cout << "Inc by reference to the address will increment" << anotherNum << endl;
 
 
 
