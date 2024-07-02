@@ -13,18 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Tuts">
+      <UniqueIdentifier>{fada6464-76ee-4915-b5ff-43c2a5a6a386}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Oop">
+      <UniqueIdentifier>{bb2626d4-9d24-45ea-9d69-6f2b4eb26ac5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CPP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="OOP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>Source Files\Oop</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include=".h">
+      <Filter>Source Files\Tuts</Filter>
     </ClInclude>
-    <ClInclude Include="increment.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="inc.h">
+      <Filter>Source Files\Tuts</Filter>
+    </ClInclude>
+    <ClInclude Include="factorial.h">
+      <Filter>Source Files\Tuts</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

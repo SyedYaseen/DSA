@@ -4,9 +4,13 @@
 #include <iostream>
 #include <string>
 #include "inc.h"
+#include "factorial.h"
 using namespace std;
 
 // Generics - Templates in c++
+
+
+
 template<typename T>
 T addAnything(T a, T b) {
     return a + b;
@@ -19,8 +23,29 @@ int returnNum(int &num) {
     return num;
 }
 
-int main()
+#define log(val) cout << val << endl
+
+
+//example for variadic 
+template<typename K>
+void func(K val) {
+    cout << "Single print: " << val << endl;
+}
+
+template<typename K, typename... Args>
+void func(K val, Args... vals) {
+    cout << "Multi arg print" << val << endl;
+    func(vals...);
+}
+
+
+int basics() // was main
 {
+
+    // Variadic
+
+    func(1, 2, "THis", "That");
+
 
     // In out
     //string firstName;
@@ -40,13 +65,13 @@ int main()
     // int& declares references to a value e.g. int a = 5; int& b = a; b = 10; will change value of a and b to 10 becuase both refer to the same memory location.
     // if we do int a = 5; int b = a; there are two memory allocations created, changing values on either will not affect the other
 
-    int age = 30;
-    int* agePointer = &age; // A pointer to the memory location of age variable
-    int ageDeref = *agePointer; // Putting star before pointer dereference the pointer and shows the value in memory pointed by the pointer
-    
-    int& ageRef = age;
-    int* pAgeRef = &ageRef;
-    ageRef = 27;
+    //int age = 30;
+    //int* agePointer = &age; // A pointer to the memory location of age variable
+    //int ageDeref = *agePointer; // Putting star before pointer dereference the pointer and shows the value in memory pointed by the pointer
+    //
+    //int& ageRef = age;
+    //int* pAgeRef = &ageRef;
+    //ageRef = 27;
 
 
     //cout << "age " << age << endl; 
@@ -58,19 +83,19 @@ int main()
     //cout << "ageRef " << ageRef << endl;
     //cout << "pAgeRef " << pAgeRef << endl;
 
-    int a = 5;
-    int& aAmber = a;
-    int* aPtr = &a;
-    int* aAmberPtr = &aAmber;
+    //int a = 5;
+    //int& aAmber = a;
+    //int* aPtr = &a;
+    //int* aAmberPtr = &aAmber;
 
     //cout << "int& a: " << aAmber << endl;
     //cout << "aPtr: " << aPtr << endl;
     //cout << "aAmberPtr: " << aAmberPtr << endl;
 
-    int b = a;
-    int& c = a;
-    b = 10;
-    c = 15;
+    //int b = a;
+    //int& c = a;
+    //b = 10;
+    //c = 15;
     //cout << "a: " << a << endl;
     //cout << "b: " << b << endl;
     //cout << "int& a: " << &a << endl;
@@ -79,11 +104,11 @@ int main()
 
     // Arr and pointers
 
-    int myArr[5];
-    myArr[0] = 1;
-    myArr[1] = 2;
+    //int myArr[5];
+    //myArr[0] = 1;
+    //myArr[1] = 2;
 
-    int* myAp = myArr;
+    //int* myAp = myArr;
     
     //*myAp = 15;
     //myAp++;
@@ -128,8 +153,8 @@ int main()
     //    cout << myArr[i] << endl;
     //}
 
-    char name[] = "yaseen"; // all strings have a 0 at the end when they compile, thats how they determine that a string is over
-    char nameAsArr[] = { 'y', 'a', 's', 'e', 'e', 'n', 0 }; 
+    //char name[] = "yaseen"; // all strings have a 0 at the end when they compile, thats how they determine that a string is over
+    //char nameAsArr[] = { 'y', 'a', 's', 'e', 'e', 'n', 0 }; 
     
     //using int
     //for (int i = 0; i < name[i] != 0; i++) // value 0, false, NULL == false, anything other than this is a true value
@@ -138,40 +163,40 @@ int main()
     //}
 
     // using pointer - init pointer to start of arr; check if deref'd pointer is not 0; increment pointer
-    for (char *cp = name; *cp != 0; cp++) // value 0, false, NULL == false, anything other than this is a true value
-    {
-        //cout << *cp << endl;
-    }
+    //for (char *cp = name; *cp != 0; cp++) // value 0, false, NULL == false, anything other than this is a true value
+    //{
+    //    //cout << *cp << endl;
+    //}
 
-    int* myP;
+    //int* myP;
 
-    try
-    {
-        myP = new int[10000];
+    //try
+    //{
+    //    myP = new int[10000];
 
-        delete[] myP; // after op complete remove memory to prevent memory leaks
-         
-    }
-    catch (...)
-    {
-        printf("Failed malloc");
-    }
+    //    delete[] myP; // after op complete remove memory to prevent memory leaks
+    //     
+    //}
+    //catch (...)
+    //{
+    //    printf("Failed malloc");
+    //}
     
 
     // structs
-    struct Emp {
-        const int uid;
-        const char* name;
-        int course_count;
-    };
+    //struct Emp {
+    //    const int uid;
+    //    const char* name;
+    //    int course_count;
+    //};
 
-    Emp yaseen = { 001, "Yaseen", 1 };
-    Emp bismi = { 002, "Almas", 1 };
-    // Can change the name even though its const, because it points to 
-    // the pointer and we can change the value
-    // in the address but not the address itself.
-    yaseen.name = "Syed";
-    Emp* bPtr = &bismi;
+    //Emp yaseen = { 001, "Yaseen", 1 };
+    //Emp bismi = { 002, "Almas", 1 };
+    //// Can change the name even though its const, because it points to 
+    //// the pointer and we can change the value
+    //// in the address but not the address itself.
+    //yaseen.name = "Syed";
+    //Emp* bPtr = &bismi;
 
     //printf(yaseen.name);
     //printf("\n");
@@ -180,34 +205,44 @@ int main()
 
     // enums
 
-    enum cars {
-        lexus, // returns 0
-        camry, //returns 1
-        corolla // return 2
-    };
+    //enum cars {
+    //    lexus, // returns 0
+    //    camry, //returns 1
+    //    corolla // return 2
+    //};
 
     //cout << corolla;
 
     // call by value, call by reference
-    int anotherNum = 5;
-    incByValue(anotherNum);
-    cout << "Inc by value wont increment" << anotherNum << endl;
-    incByReference(&anotherNum);
-    cout << "Inc by reference to the address will increment" << anotherNum << endl;
+    //int anotherNum = 5;
+    //incByValue(anotherNum);
+    //cout << "Inc by value wont increment" << anotherNum << endl;
+    //incByReference(&anotherNum);
+    //cout << "Inc by reference to the address will increment" << anotherNum << endl;
 
     // This is much cleaner since when calling this method,
     // we pass the value directly instead of a pointer,
     // but the argument for the method is a referece
-    incByReferenceCorrectWay(anotherNum);
+    //incByReferenceCorrectWay(anotherNum);
 
 
     // Functional pointers
-    int (*retTwoPtr)() = returnTwo;
+    //int (*retTwoPtr)() = returnTwo;
+    //int (*retNumPtr)(int &num) = returnNum;
+    //int t = 5;
+    //cout << "Returns same number " << retNumPtr(t);
 
-    int (*retNumPtr)(int &num) = returnNum;
-    int t = 5;
-    cout << "Returns same number " << retNumPtr(t);
+    // Null pointer
+    //printf("Printing null pointer address: %p\n", nullptr); // %p prints the pointer value
+    //printf("Printing null pointer value: %d\n", nullptr); // %d prints the 0 value
 
+
+    // Recursion
+    //cout << factorial(5);
+
+    // Macros
+    //char n[] = "yaseen";
+    //log(n);
 
 
     return 0;
