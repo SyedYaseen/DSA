@@ -3,14 +3,20 @@
 
 #include <iostream>
 #include <string>
+#include "inc.h"
 using namespace std;
 
-void incByValue(int val) {
-    val++;
+// Generics - Templates in c++
+template<typename T>
+T addAnything(T a, T b) {
+    return a + b;
 }
 
-void incByReference(int* ptrVal) {
-    ++(*ptrVal);
+int returnTwo() {
+    return 2;
+}
+int returnNum(int &num) {
+    return num;
 }
 
 int main()
@@ -189,10 +195,18 @@ int main()
     incByReference(&anotherNum);
     cout << "Inc by reference to the address will increment" << anotherNum << endl;
 
+    // This is much cleaner since when calling this method,
+    // we pass the value directly instead of a pointer,
+    // but the argument for the method is a referece
+    incByReferenceCorrectWay(anotherNum);
 
 
+    // Functional pointers
+    int (*retTwoPtr)() = returnTwo;
 
-
+    int (*retNumPtr)(int &num) = returnNum;
+    int t = 5;
+    cout << "Returns same number " << retNumPtr(t);
 
 
 
