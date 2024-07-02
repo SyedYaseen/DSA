@@ -6,6 +6,7 @@ int main() {
 	yaseen.name = "Yaseen";
 
 	yaseen.printName();
-
+	yaseen.setSecret(12);
+	cout << yaseen.getSecret() << endl;
 	return 0;
 }
