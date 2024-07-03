@@ -30,16 +30,19 @@
     <ClCompile Include="User.cpp">
       <Filter>Source Files\Oop</Filter>
     </ClCompile>
+    <ClCompile Include="Phone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include=".h">
-      <Filter>Source Files\Tuts</Filter>
-    </ClInclude>
     <ClInclude Include="inc.h">
       <Filter>Source Files\Tuts</Filter>
     </ClInclude>
     <ClInclude Include="factorial.h">
       <Filter>Source Files\Tuts</Filter>
+    </ClInclude>
+    <ClInclude Include="Phone.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
