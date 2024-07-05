@@ -127,15 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Phone.cpp" />
     <ClCompile Include="CPP.cpp" />
     <ClCompile Include="OOP.cpp" />
-    <ClCompile Include="Phone.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="factorial.h" />
     <ClInclude Include="inc.h" />
     <ClInclude Include="Phone.h" />
+    <ClInclude Include="Rectangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
