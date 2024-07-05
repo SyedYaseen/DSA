@@ -16,10 +16,10 @@ public:
     }; // Default constructor
     Phone(const std::string& name, const std::string& os); // Param constructor
     Phone(const Phone& phone);
-    virtual void MakeCall();
+    virtual void MakeCall(); // This is a pure vitual function. Only signature no implementation
     std::string getName() { return _name; }
     ~Phone() {
-        std::cout << "Destructor called for " << _name << std::endl;
+        //std::cout << "Destructor called for " << _name << std::endl;
     }
 };
 
@@ -30,4 +30,12 @@ public:
         std::cout << "Inside smart Phone\n";
     }
 };
+
+class DumbPhone : public Phone {
+public:
+    void MakeCall() {
+        std::cout << "Inside dumb phone\n";
+    }
+};
+
 #endif // PHONE_H
