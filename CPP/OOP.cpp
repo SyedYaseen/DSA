@@ -3,7 +3,7 @@
 #include "Phone.h"
 #include "Rectangle.h"
 using namespace std;
-int main() {
+int oop() {
 	//User yaseen;
 	//yaseen.name = "Yaseen";
 	//yaseen.printName();
@@ -38,11 +38,11 @@ int main() {
 	* unless the methods that are called have the virtual keyword it wont execute the method of the correct class
 	*/
 	
-	Phone* p1Ptr;
-	SmartPhone smartPh2;
-	DumbPhone dumbPh2;
-	//p1Ptr = &dumbPh2;
-	p1Ptr->MakeCall();
+	//Phone* p1Ptr;
+	//SmartPhone smartPh2;
+	//DumbPhone dumbPh2;
+	////p1Ptr = &dumbPh2;
+	//p1Ptr->MakeCall();
 
 
 	//Self referce pointer - this keyword

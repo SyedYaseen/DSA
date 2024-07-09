@@ -16,25 +16,34 @@
     <Filter Include="Source Files\Tuts">
       <UniqueIdentifier>{fada6464-76ee-4915-b5ff-43c2a5a6a386}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Oop">
+    <Filter Include="Source Files\Tuts\Oop">
       <UniqueIdentifier>{bb2626d4-9d24-45ea-9d69-6f2b4eb26ac5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LeetCode">
+      <UniqueIdentifier>{8743f58e-1eb6-49d9-97a5-5944f463da59}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CPP.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="OOP.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="User.cpp">
-      <Filter>Source Files\Oop</Filter>
+      <Filter>Source Files\Tuts\Oop</Filter>
     </ClCompile>
     <ClCompile Include="Phone.cpp">
-      <Filter>Source Files\Oop</Filter>
+      <Filter>Source Files\Tuts\Oop</Filter>
     </ClCompile>
     <ClCompile Include="Rectangle.cpp">
-      <Filter>Source Files\Oop</Filter>
+      <Filter>Source Files\Tuts\Oop</Filter>
+    </ClCompile>
+    <ClCompile Include="OOP.cpp">
+      <Filter>Source Files\Tuts</Filter>
+    </ClCompile>
+    <ClCompile Include="CPP.cpp">
+      <Filter>Source Files\Tuts</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratePrantheses-22-M.cpp">
+      <Filter>Source Files\LeetCode</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +53,11 @@
     <ClInclude Include="factorial.h">
       <Filter>Source Files\Tuts</Filter>
     </ClInclude>
-    <ClInclude Include="Phone.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Rectangle.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\Tuts</Filter>
+    </ClInclude>
+    <ClInclude Include="Phone.h">
+      <Filter>Source Files\Tuts</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
