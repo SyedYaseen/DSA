@@ -1,12 +1,13 @@
 #include <iostream>
 #include "User.cpp"
+#include "Phone.h"
 using namespace std;
 int main() {
-	User yaseen;
-	yaseen.name = "Yaseen";
+	//User yaseen;
+	//yaseen.name = "Yaseen";
+	//yaseen.printName();
+	Phone onePlus;
 
-	yaseen.printName();
-	yaseen.setSecret(12);
-	cout << yaseen.getSecret() << endl;
+
 	return 0;
 }
