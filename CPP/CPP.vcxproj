@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GeneratePrantheses-22-M.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Phone.cpp" />
     <ClCompile Include="CPP.cpp" />
     <ClCompile Include="OOP.cpp" />

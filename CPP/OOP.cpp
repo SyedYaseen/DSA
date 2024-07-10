@@ -6,16 +6,7 @@
 #include <vector>
 
 using namespace std;
-
-
-struct Corners {
-	int a;
-	int b;
-	int c;
-	int d;
-};
-
-int main() {
+int oop() {
 	//User yaseen;
 	//yaseen.name = "Yaseen";
 	//yaseen.printName();
