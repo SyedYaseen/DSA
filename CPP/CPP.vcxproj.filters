@@ -42,7 +42,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratePrantheses-22-M.cpp">
+    <ClCompile Include="GeneratePrantheses-22-M.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClCompile>
   </ItemGroup>
@@ -61,6 +61,15 @@
     </ClInclude>
     <ClInclude Include="functors.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FindDuplicateNumber-287-M.h">
+      <Filter>Source Files\LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
+      <Filter>Source Files\LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="InvertTree-226-E.h">
+      <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
