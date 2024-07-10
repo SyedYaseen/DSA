@@ -71,5 +71,8 @@
     <ClInclude Include="InvertTree-226-E.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
+    <ClInclude Include="MaximumDepthBinaryTree-104-E.h">
+      <Filter>Source Files\LeetCode</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

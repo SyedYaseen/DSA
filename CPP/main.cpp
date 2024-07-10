@@ -2,7 +2,7 @@
 #include <vector>
 #include "Tree.h"
 using namespace std;
-#include "InvertTree-226-E.h"
+#include "MaximumDepthBinaryTree-104-E.h"
 int main() {
 	Solution s;
 
@@ -14,12 +14,13 @@ int main() {
 			new TreeNode(6), 
 			new TreeNode(9)));
 
-	TreeNode* t2 = new TreeNode(2,
-		new TreeNode(1),
-		new TreeNode(3));
+	TreeNode* t2 = new TreeNode(3,
+		new TreeNode(9),
+		new TreeNode(20, 
+			new TreeNode(15), new TreeNode(7)));
 
-	s.invertTree(t1);
-	s.invertTree(t2);
+	//s.maxDepth(t1);
+	int a = s.maxDepth(t2);
 	
 	return 0;
 }

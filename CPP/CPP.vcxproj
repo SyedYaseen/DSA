@@ -141,6 +141,7 @@
     <ClInclude Include="functors.h" />
     <ClInclude Include="inc.h" />
     <ClInclude Include="InvertTree-226-E.h" />
+    <ClInclude Include="MaximumDepthBinaryTree-104-E.h" />
     <ClInclude Include="Phone.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Tree.h" />
