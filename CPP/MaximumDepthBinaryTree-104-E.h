@@ -1,21 +1,34 @@
 #pragma once
 #include "Tree.h"
+#include <queue>
+using namespace std;
 class Solution {
 public:
-    //Max of left, right
-    int left = 0;
-    int right = 0;
-    void Traverse(TreeNode* current, int& side) {
-        if (current) side++;
-        
-        Traverse(current->left, side);
-        Traverse(current->right, side);
-   
+    // BFS
+    int maxDepth(TreeNode* root) {
+        if (!root) return 0;
+        int res = 0;
+        std::queue<TreeNode*> q;
+        q.push(root);
+
+        while (!q.empty()) {
+            int sz = q.size();
+            res++;
+            for (int i = 0; i < sz; i++)
+            {
+                TreeNode* node = q.front(); q.pop();
+                if (node->left) q.push(node->left);
+                if (node->right) q.push(node->right);
+            }
+        }
+        return res;
     }
 
+    // Recursive DFS
     int maxDepth(TreeNode* root) {
-        Traverse(root->left, left);
-        Traverse(root->right, right);
-        return left > right ? left + 1 : right + 1;
+        if (!root) return 0;
+        return 1 + std::max(
+            maxDepth(root->left), 
+            maxDepth(root->right));
     }
 };
