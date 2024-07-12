@@ -2,7 +2,7 @@
 #include <vector>
 #include "Tree.h"
 using namespace std;
-#include "MaximumDepthBinaryTree-104-E.h"
+#include "BalancedBinaryTree-110-E.h"
 int main() {
 	Solution s;
 
@@ -20,7 +20,7 @@ int main() {
 			new TreeNode(15), new TreeNode(7)));
 
 	//s.maxDepth(t1);
-	int a = s.maxDepth(t2);
+	int a = s.isBalanced(t2);
 	
 	return 0;
 }

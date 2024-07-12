@@ -24,11 +24,11 @@ public:
         return res;
     }
 
-    // Recursive DFS
-    int maxDepth(TreeNode* root) {
-        if (!root) return 0;
-        return 1 + std::max(
-            maxDepth(root->left), 
-            maxDepth(root->right));
-    }
+    //// Recursive DFS
+    //int maxDepth(TreeNode* root) {
+    //    if (!root) return 0;
+    //    return 1 + std::max(
+    //        maxDepth(root->left), 
+    //        maxDepth(root->right));
+    //}
 };

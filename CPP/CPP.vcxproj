@@ -136,6 +136,8 @@
     <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BalancedBinaryTree-110-E.h" />
+    <ClInclude Include="DiameterOfBinTree-543-E.h" />
     <ClInclude Include="factorial.h" />
     <ClInclude Include="FindDuplicateNumber-287-M.h" />
     <ClInclude Include="functors.h" />

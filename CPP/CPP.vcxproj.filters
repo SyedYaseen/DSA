@@ -74,5 +74,11 @@
     <ClInclude Include="MaximumDepthBinaryTree-104-E.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
+    <ClInclude Include="DiameterOfBinTree-543-E.h">
+      <Filter>Source Files\LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="BalancedBinaryTree-110-E.h">
+      <Filter>Source Files\LeetCode</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
