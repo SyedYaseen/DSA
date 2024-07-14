@@ -21,6 +21,7 @@ int main() {
 
 	//s.maxDepth(t1);
 	//int a = s.isBalanced(t2);
+	//string x = s.decodeString("100[leetcode]");
 	string a = s.decodeString("3[a]2[bc]"); 
 	//string a = s.decodeString("zxy3[a]2[bc]");
 	//string b = s.decodeString("zxy3[a2[c]]");
