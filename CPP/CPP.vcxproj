@@ -148,6 +148,7 @@
     <ClInclude Include="MaximumDepthBinaryTree-104-E.h" />
     <ClInclude Include="Phone.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="ReorgString-767-M.h" />
     <ClInclude Include="Tree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

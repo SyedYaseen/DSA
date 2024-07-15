@@ -2,7 +2,7 @@
 #include <vector>
 #include "Tree.h"
 using namespace std;
-#include "DecodeString-394-M.h"
+#include "ReorgString-767-M.h"
 int main() {
 	Solution s;
 
@@ -22,7 +22,7 @@ int main() {
 	//s.maxDepth(t1);
 	//int a = s.isBalanced(t2);
 	//string x = s.decodeString("100[leetcode]");
-	string a = s.decodeString("3[a]2[bc]"); 
+                                 	string a = s.reorganizeString("aaab");
 	//string a = s.decodeString("zxy3[a]2[bc]");
 	//string b = s.decodeString("zxy3[a2[c]]");
 	
