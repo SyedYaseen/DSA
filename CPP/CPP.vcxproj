@@ -146,6 +146,7 @@
     <ClInclude Include="InvertTree-226-E.h" />
     <ClInclude Include="LongestSubString-3-M.h" />
     <ClInclude Include="MaximumDepthBinaryTree-104-E.h" />
+    <ClInclude Include="MinPenalty-2843-M.h" />
     <ClInclude Include="Phone.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="ReorgString-767-M.h" />

@@ -2,7 +2,7 @@
 #include <vector>
 #include "Tree.h"
 using namespace std;
-#include "ReorgString-767-M.h"
+#include "MinPenalty-2843-M.h"
 int main() {
 	Solution s;
 
@@ -22,7 +22,9 @@ int main() {
 	//s.maxDepth(t1);
 	//int a = s.isBalanced(t2);
 	//string x = s.decodeString("100[leetcode]");
-                                 	string a = s.reorganizeString("aaab");
+    //int a = s.bestClosingTime("YYNY");
+	int a = s.bestClosingTime("NYNNNYYN"); // ans 0
+	
 	//string a = s.decodeString("zxy3[a]2[bc]");
 	//string b = s.decodeString("zxy3[a2[c]]");
 	

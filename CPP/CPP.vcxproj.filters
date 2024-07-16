@@ -89,5 +89,8 @@
     <ClInclude Include="ReorgString-767-M.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
+    <ClInclude Include="MinPenalty-2843-M.h">
+      <Filter>Source Files\LeetCode</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
