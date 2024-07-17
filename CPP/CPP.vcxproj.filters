@@ -22,6 +22,12 @@
     <Filter Include="Source Files\LeetCode">
       <UniqueIdentifier>{8743f58e-1eb6-49d9-97a5-5944f463da59}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Demos">
+      <UniqueIdentifier>{f44b937c-e457-4de3-9574-a5f21fda5e0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Demos\HeaderVsCpp">
+      <UniqueIdentifier>{c514a10b-26fa-4b28-a978-02db548e52a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="User.cpp">
@@ -44,6 +50,12 @@
     </ClCompile>
     <ClCompile Include="GeneratePrantheses-22-M.h">
       <Filter>Source Files\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="HeaderCpp.cpp">
+      <Filter>Source Files\Demos\HeaderVsCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files\Demos\HeaderVsCpp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +103,9 @@
     </ClInclude>
     <ClInclude Include="MinPenalty-2843-M.h">
       <Filter>Source Files\LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="Header1.h">
+      <Filter>Source Files\Demos\HeaderVsCpp</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

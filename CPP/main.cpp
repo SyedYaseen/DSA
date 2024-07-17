@@ -3,7 +3,7 @@
 #include "Tree.h"
 using namespace std;
 #include "MinPenalty-2843-M.h"
-int main() {
+int Leet() {
 	Solution s;
 
 	//TreeNode* t1 = new TreeNode(4, 
