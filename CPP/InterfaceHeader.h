@@ -3,10 +3,7 @@
 #define HEADER_1
 
 class Foo {
-
-
 	int _bar;
-
 public:
 	//Constructor
 	Foo(int val);
@@ -16,4 +13,4 @@ public:
 };
 
 
-#endif // !1
+#endif // HEADER_1

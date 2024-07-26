@@ -1,4 +1,4 @@
-#include "Header1.h"
+#include "InterfaceHeader.h"
 
 int main() {
 	Foo fooObj(5);

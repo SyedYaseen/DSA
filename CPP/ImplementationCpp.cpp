@@ -1,4 +1,4 @@
-#include "Header1.h"
+#include "InterfaceHeader.h"
 #include <iostream>
 
 Foo::Foo(const int val) : _bar(val) {}

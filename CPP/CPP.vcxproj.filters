@@ -51,7 +51,7 @@
     <ClCompile Include="GeneratePrantheses-22-M.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClCompile>
-    <ClCompile Include="HeaderCpp.cpp">
+    <ClCompile Include="ImplementationCpp.cpp">
       <Filter>Source Files\Demos\HeaderVsCpp</Filter>
     </ClCompile>
     <ClCompile Include="Source.cpp">
@@ -104,7 +104,7 @@
     <ClInclude Include="MinPenalty-2843-M.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
-    <ClInclude Include="Header1.h">
+    <ClInclude Include="InterfaceHeader.h">
       <Filter>Source Files\Demos\HeaderVsCpp</Filter>
     </ClInclude>
   </ItemGroup>
