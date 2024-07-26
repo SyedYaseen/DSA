@@ -30,81 +30,92 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="User.cpp">
+    <ClCompile Include="Tuts\User.cpp">
       <Filter>Source Files\Tuts\Oop</Filter>
     </ClCompile>
-    <ClCompile Include="Phone.cpp">
+    <ClCompile Include="Tuts\Phone.cpp">
       <Filter>Source Files\Tuts\Oop</Filter>
     </ClCompile>
-    <ClCompile Include="Rectangle.cpp">
+    <ClCompile Include="Tuts\Rectangle.cpp">
       <Filter>Source Files\Tuts\Oop</Filter>
     </ClCompile>
-    <ClCompile Include="OOP.cpp">
+    <ClCompile Include="Tuts\OOP.cpp">
       <Filter>Source Files\Tuts</Filter>
     </ClCompile>
-    <ClCompile Include="CPP.cpp">
+    <ClCompile Include="Tuts\CPP.cpp">
       <Filter>Source Files\Tuts</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="LeetCode\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratePrantheses-22-M.h">
+    <ClCompile Include="LeetCode\Medium\GeneratePrantheses-22-M.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="ImplementationCpp.cpp">
+=======
+    <ClCompile Include="Tuts\HeaderCpp.cpp">
+>>>>>>> b5a050cc8c62971308eaa0f6f6b74dbbf06f8dca
       <Filter>Source Files\Demos\HeaderVsCpp</Filter>
     </ClCompile>
-    <ClCompile Include="Source.cpp">
+    <ClCompile Include="Tuts\Source.cpp">
       <Filter>Source Files\Demos\HeaderVsCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="LeetCode\Medium\DecodeStringAtIndex-880-M.h">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc.h">
+    <ClInclude Include="Tuts\inc.h">
       <Filter>Source Files\Tuts</Filter>
     </ClInclude>
-    <ClInclude Include="factorial.h">
+    <ClInclude Include="Tuts\factorial.h">
       <Filter>Source Files\Tuts</Filter>
     </ClInclude>
-    <ClInclude Include="Rectangle.h">
+    <ClInclude Include="Tuts\Rectangle.h">
       <Filter>Source Files\Tuts</Filter>
     </ClInclude>
-    <ClInclude Include="Phone.h">
+    <ClInclude Include="Tuts\Phone.h">
       <Filter>Source Files\Tuts</Filter>
     </ClInclude>
-    <ClInclude Include="functors.h">
+    <ClInclude Include="Tuts\functors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FindDuplicateNumber-287-M.h">
+    <ClInclude Include="LeetCode\Medium\FindDuplicateNumber-287-M.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
-    <ClInclude Include="Tree.h">
+    <ClInclude Include="LeetCode\Tree.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
-    <ClInclude Include="InvertTree-226-E.h">
+    <ClInclude Include="LeetCode\Easy\InvertTree-226-E.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
-    <ClInclude Include="MaximumDepthBinaryTree-104-E.h">
+    <ClInclude Include="LeetCode\Easy\MaximumDepthBinaryTree-104-E.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
-    <ClInclude Include="DiameterOfBinTree-543-E.h">
+    <ClInclude Include="LeetCode\Easy\DiameterOfBinTree-543-E.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
-    <ClInclude Include="BalancedBinaryTree-110-E.h">
+    <ClInclude Include="LeetCode\Easy\BalancedBinaryTree-110-E.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
-    <ClInclude Include="LongestSubString-3-M.h">
+    <ClInclude Include="LeetCode\Medium\LongestSubString-3-M.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
-    <ClInclude Include="DecodeString-394-M.h">
+    <ClInclude Include="LeetCode\Medium\DecodeString-394-M.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
-    <ClInclude Include="ReorgString-767-M.h">
+    <ClInclude Include="LeetCode\Medium\ReorgString-767-M.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
-    <ClInclude Include="MinPenalty-2843-M.h">
+    <ClInclude Include="LeetCode\Medium\MinPenalty-2843-M.h">
       <Filter>Source Files\LeetCode</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="InterfaceHeader.h">
+=======
+    <ClInclude Include="Tuts\Header1.h">
+>>>>>>> b5a050cc8c62971308eaa0f6f6b74dbbf06f8dca
       <Filter>Source Files\Demos\HeaderVsCpp</Filter>
     </ClInclude>
   </ItemGroup>

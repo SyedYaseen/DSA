@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClCompile Include="GeneratePrantheses-22-M.h" />
     <ClCompile Include="ImplementationCpp.cpp" />
     <ClCompile Include="main.cpp" />
@@ -154,6 +155,36 @@
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="ReorgString-767-M.h" />
     <ClInclude Include="Tree.h" />
+=======
+    <ClCompile Include="LeetCode\Medium\DecodeStringAtIndex-880-M.h" />
+    <ClCompile Include="LeetCode\Medium\GeneratePrantheses-22-M.h" />
+    <ClCompile Include="Tuts\HeaderCpp.cpp" />
+    <ClCompile Include="LeetCode\main.cpp" />
+    <ClCompile Include="Tuts\Phone.cpp" />
+    <ClCompile Include="Tuts\CPP.cpp" />
+    <ClCompile Include="Tuts\OOP.cpp" />
+    <ClCompile Include="Tuts\Rectangle.cpp" />
+    <ClCompile Include="Tuts\Source.cpp" />
+    <ClCompile Include="Tuts\User.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LeetCode\Easy\BalancedBinaryTree-110-E.h" />
+    <ClInclude Include="LeetCode\Medium\DecodeString-394-M.h" />
+    <ClInclude Include="LeetCode\Easy\DiameterOfBinTree-543-E.h" />
+    <ClInclude Include="Tuts\factorial.h" />
+    <ClInclude Include="LeetCode\Medium\FindDuplicateNumber-287-M.h" />
+    <ClInclude Include="Tuts\functors.h" />
+    <ClInclude Include="Tuts\Header1.h" />
+    <ClInclude Include="Tuts\inc.h" />
+    <ClInclude Include="LeetCode\Easy\InvertTree-226-E.h" />
+    <ClInclude Include="LeetCode\Medium\LongestSubString-3-M.h" />
+    <ClInclude Include="LeetCode\Easy\MaximumDepthBinaryTree-104-E.h" />
+    <ClInclude Include="LeetCode\Medium\MinPenalty-2843-M.h" />
+    <ClInclude Include="Tuts\Phone.h" />
+    <ClInclude Include="Tuts\Rectangle.h" />
+    <ClInclude Include="LeetCode\Medium\ReorgString-767-M.h" />
+    <ClInclude Include="LeetCode\Tree.h" />
+>>>>>>> b5a050cc8c62971308eaa0f6f6b74dbbf06f8dca
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
