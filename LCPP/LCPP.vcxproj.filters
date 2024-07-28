@@ -51,6 +51,9 @@
     <ClInclude Include="Easy\MaximumDepthBinaryTree-104-E.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Medium\CountAndSay-38-M.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

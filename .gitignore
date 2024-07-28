@@ -11,3 +11,8 @@ riderModule.iml
 /.vs/ProjectEvaluation
 /CPP/x64/Debug
 /x64/Debug
+.vs/cmake.db
+CPPStuff/CMakeTuts/.vscode
+CPPStuff/CMakeTuts/basics/build
+CPPStuff/CMakeTuts/makingLibrary/build
+CPPStuff/CMakeTuts/usingTheLib/build
