@@ -13,7 +13,7 @@ riderModule.iml
 /x64/Debug
 .vs/cmake.db
 CPPStuff/CMakeTuts/.vscode
-
+CPPStuff/CMakeTuts/usingTheLib/external
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles

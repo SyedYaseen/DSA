@@ -4,8 +4,14 @@
 ## Commands
 
 Uses default VS compiler
-cmake ..
-cmake --build .
+
+- cmake ..
+- cmake --build .
+- Add options whem generating make files by -D<nameOfOption>=Value
+
+```
+cmake .. -DGLFW_BUILD_DOCS=OFF
+```
 
 Uses MinGW - Havent configured it properly yet
 cmake -S CMakeLists.txtLoc -B BuildFolder
@@ -80,9 +86,23 @@ target_link_libraries(${PROJECT_NAME} PRIVATE makingLibrary)
 2. The PRIVATE keyword indicates that makingLibrary is used only for the build of this executable and not for any dependent targets.
 3. If not present, the usingLibsTest executable won't be linked against the makingLibrary static library.
 
+## Submodules
+
+Add options whem generating make files by -D<nameOfOption>=Value
+
+```
+cmake .. -DGLFW_BUILD_DOCS=OFF
+```
+
 ## Summary
 
 - Include Directories: Ensure the compiler can find the headers.
 - Link Directories: Ensure the linker can find the libraries.
 - Add Executable: Defines the executable target to be built.
 - Link Libraries: Links the required static library to the executable.
+
+Why target names are important?
+On YT comment:
+https://www.youtube.com/watch?v=ED-WUk440qc&list=PLalVdRk2RC6o5GHu618ARWh0VO0bFlif4&index=3&ab_channel=Code%2CTech%2CandTutorials
+
+target_link_libraries you reference other targets, in this case glfw specifies a target. This comes from the call to add_library() in external/glfw/src/CMakeLists.txt. In that CMakeLists.txt file you can see that they somehow set the name of the target library to glfw3 (for whatever reason), but the beauty of using targets is that you don't need to care about how it is actually called. You work only with the target name which can be completely different than the library name.
