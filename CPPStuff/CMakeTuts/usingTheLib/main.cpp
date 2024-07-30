@@ -2,7 +2,7 @@
 #include <iostream>
 
 int main() {
-    int x = testmathfunc::add(5, 7);
+    int x = testmathfunc::add(2, 2);
 
     std::cout << x;
 
