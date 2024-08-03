@@ -7,12 +7,12 @@ namespace DSA.Leetcode.Hard
         {
             int result = 0;
             int l = 0;
-            int i = l+1;
+            int i = l + 1;
             int r = i + 1;
             int lastIndex = height.Length;
 
-       
-            
+
+
 
             // Initial l needs to be incremented until the next item
             // is not higher than the current one
@@ -30,11 +30,11 @@ namespace DSA.Leetcode.Hard
             int blocks = 0;
             while (r < lastIndex)
             {
-                if (r+1 < lastIndex && height[r+1] < height[r])
+                if (r + 1 < lastIndex && height[r + 1] < height[r])
                 {
-                    r++; 
+                    r++;
                 }
-                if(height[r] <= height[l])
+                if (height[r] <= height[l])
                 {
                     blocks += height[r];
                     r++;
@@ -45,10 +45,10 @@ namespace DSA.Leetcode.Hard
                     result = ((r - l) * Math.Min(height[r], height[l])) - blocks;
                     l = r;
                     r++;
-                                        
+
                 }
 
-                
+
             }
 
 
@@ -79,7 +79,7 @@ namespace DSA.Leetcode.Hard
             int blocks = 0;
             while (r < lastIndex)
             {
-                if (r + 1 < lastIndex && height[r + 1] < height[r] )  // height[r] < height[l] &&
+                if (r + 1 < lastIndex && height[r + 1] < height[r])  // height[r] < height[l] &&
                 {
                     blocks += height[r];
                     r++;

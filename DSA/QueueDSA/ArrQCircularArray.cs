@@ -6,12 +6,12 @@ public class ArrQCircularArray
     private int _back;
     private int[] ArrayQ;
     public int Count;
-    
+
     public ArrQCircularArray(int size)
     {
         ArrayQ = new int[size];
     }
-    
+
     public void EnQueue(int value)
     {
         if (Count < ArrayQ.Length)
@@ -22,7 +22,7 @@ public class ArrQCircularArray
         }
         else throw new StackOverflowException("No space");
     }
-    
+
     public int DeQueue()
     {
         if (Count > 0)
@@ -34,7 +34,7 @@ public class ArrQCircularArray
 
             return item;
         }
-        
+
         else throw new NullReferenceException("Q is empty");
     }
 

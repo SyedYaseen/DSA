@@ -1,6 +1,4 @@
-﻿using DSA.Leetcode.Medium;
-
-namespace DSA.Leetcode.Medium
+﻿namespace DSA.Leetcode.Medium
 {
     public class ThreeSum
     {
@@ -11,7 +9,7 @@ namespace DSA.Leetcode.Medium
             for (int k = 0; k < nums.Length; k++)
             {
                 if (k > 0 && nums[k - 1] == nums[k]) continue;
-                
+
                 int i = k + 1; // So that I never need to start with the same item again. Will create duplicate values
                 int j = nums.Length - 1;
 
@@ -19,7 +17,7 @@ namespace DSA.Leetcode.Medium
                 {
                     if (nums[i] + nums[j] + nums[k] > 0) j--;
                     else if (i == k || nums[i] + nums[j] + nums[k] < 0) i++;
-                    else 
+                    else
                     {
                         result.Add([nums[i], nums[j], nums[k]]);
 

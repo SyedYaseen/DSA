@@ -3,7 +3,7 @@
 public class Heapify
 {
     List<int> beforeHeap = new List<int> { 5, 3, 8, 4, 1, 2 };
-    
+
     /*
      * Iterate through the list
      * Start a recursive loop when item at current index is less than left/right child index
@@ -16,18 +16,18 @@ public class Heapify
      *
      * Dont know why but apparently if I go from bottom to top I will have fewer swaps/ recursions so for loop runs in reverse
      */
-    
+
     public List<int> DoHeap()
     {
         var size = beforeHeap.Count();
         var lastParent = size / 2 - 1;
-        if (size <= 1) return beforeHeap; 
-        
-        for (var index = lastParent; index >= 0 ; index--)
+        if (size <= 1) return beforeHeap;
+
+        for (var index = lastParent; index >= 0; index--)
         {
             var current = beforeHeap[index];
             var largestIndex = GetLargestIndex(index);
-            
+
             while (current < beforeHeap[largestIndex])
                 Swap(index, largestIndex);
         }
@@ -47,7 +47,7 @@ public class Heapify
         var size = beforeHeap.Count();
         var lcIndex = GetLeftChildIndex(index);
         var rcIndex = GetRightChildIndex(index);
-        
+
         if (lcIndex > size - 1) return index;
         if (rcIndex > size - 1) return lcIndex;
 
@@ -56,5 +56,5 @@ public class Heapify
 
     public int GetLeftChildIndex(int index) => (index * 2) + 1;
     public int GetRightChildIndex(int index) => (index * 2) + 2;
-    
+
 }

@@ -14,7 +14,7 @@
                 int m = l + (r - l) / 2;
                 if (r == l + 1)
                     return Math.Min(nums[l], nums[r]);
-                                    
+
                 else if (nums[l] < nums[m]) l = m;
                 else if (nums[m] < nums[r]) r = m;
             }

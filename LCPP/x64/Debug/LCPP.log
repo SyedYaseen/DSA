@@ -1,2 +1,3 @@
 ﻿  main.cpp
+C:\Users\ssyed\Documents\Projects\DSA\LCPP\Medium\Permutations-46-M.h(12,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   LCPP.vcxproj -> C:\Users\ssyed\Documents\Projects\DSA\x64\Debug\LCPP.exe

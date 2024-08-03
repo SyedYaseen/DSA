@@ -18,7 +18,7 @@ public class QLinkedList
             Q.AddFirst(val);
             Q.Last = Q.First;
         }
-        
+
         else Q.AddLast(val);
     }
 
@@ -27,5 +27,5 @@ public class QLinkedList
         if (Q.First != null) return Q.RemoveFirst();
         else throw new NullReferenceException();
     }
-    
+
 }

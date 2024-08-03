@@ -1,12 +1,4 @@
-﻿using DSA.Leetcode.Easy;
-using DSA.Leetcode;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA.Leetcode.Easy
+﻿namespace DSA.Leetcode.Easy
 {
     internal class MergeTwoSortedLists
     {
@@ -46,7 +38,7 @@ namespace DSA.Leetcode.Easy
 
             while (list1 != null && list2 != null)
             {
-                
+
                 if (list1.val <= list2.val)
                 {
                     current.next = new ListNode(list1.val);

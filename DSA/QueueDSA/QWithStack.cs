@@ -6,7 +6,7 @@ public class QWithStack
 {
     private Stack _forward;
     private Stack _backward = new Stack();
-    
+
     public QWithStack()
     {
         _forward = new Stack();
@@ -27,7 +27,7 @@ public class QWithStack
                 _backward.Push(_forward.Pop());
             }
         }
-        
+
         return (int)(_backward.Pop() ?? throw new InvalidOperationException());
     }
 }

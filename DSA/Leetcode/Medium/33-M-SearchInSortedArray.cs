@@ -1,7 +1,4 @@
-﻿
-using DSA.Leetcode.Medium;
-
-namespace DSA.Leetcode.Medium
+﻿namespace DSA.Leetcode.Medium
 {
     internal class SearchInSortedArray
     {
@@ -9,7 +6,7 @@ namespace DSA.Leetcode.Medium
 
         public int Soln(int[] nums, int target)
         {
-            
+
             int l = 0;
             int r = nums.Length - 1;
 
@@ -26,7 +23,7 @@ namespace DSA.Leetcode.Medium
                 else if (nums[m] <= nums[r]) // right side is sorted
                 {
                     if (target <= nums[r] && target >= nums[m]) l = m;
-                    else r = m - 1; 
+                    else r = m - 1;
                 }
             }
 
@@ -35,12 +32,12 @@ namespace DSA.Leetcode.Medium
         }
 
 
-            public int Soln2(int[] nums, int target)
+        public int Soln2(int[] nums, int target)
         {
             // Get pivot
             // Perform bin search separately on each of the halves - only if value could be in there
-            
-            
+
+
 
             int l = 0;
             int r = nums.Length - 1;
@@ -60,7 +57,7 @@ namespace DSA.Leetcode.Medium
 
                     else if (nums[l] < nums[m]) l = m;
                     else if (nums[m] < nums[r]) r = m;
-                    
+
                 }
 
                 if (nums[0] <= target && target <= nums[pivot - 1])

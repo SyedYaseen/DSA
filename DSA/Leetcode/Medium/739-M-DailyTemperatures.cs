@@ -1,11 +1,4 @@
-﻿using DSA.Leetcode.Medium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA.Leetcode.Medium
+﻿namespace DSA.Leetcode.Medium
 {
     public class DailyTemperatures
     {
@@ -16,7 +9,7 @@ namespace DSA.Leetcode.Medium
             if (temperatures.Length == 1) return [0];
 
             var st = new Stack<int>();
-            
+
             st.Push(0);
             for (int i = 1; i < temperatures.Length; i++)
             {
@@ -73,9 +66,9 @@ namespace DSA.Leetcode.Medium
         // Fails for an absurd testcase
         public int[] Soln2(int[] temperatures)
         {
-            if (temperatures.Length <= 1) return [0]; 
+            if (temperatures.Length <= 1) return [0];
             int i = 0;
-            int j =  i + 1;
+            int j = i + 1;
 
             while (i < temperatures.Length - 1)
             {

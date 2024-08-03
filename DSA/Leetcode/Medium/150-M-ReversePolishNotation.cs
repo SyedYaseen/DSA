@@ -1,6 +1,4 @@
-﻿using DSA.Leetcode.Medium;
-
-namespace DSA.Leetcode.Medium
+﻿namespace DSA.Leetcode.Medium
 {
     internal class ReversePolishNotation
     {
@@ -8,7 +6,7 @@ namespace DSA.Leetcode.Medium
         public int Soln(string[] tokens)
         {
             var st = new Stack<string>();
-            
+
             for (int i = 0; i < tokens.Length; i++)
             {
                 string c = tokens[i];
@@ -18,7 +16,8 @@ namespace DSA.Leetcode.Medium
                     int num2 = int.Parse(st.Pop());
                     int num1 = int.Parse(st.Pop());
                     int temp = 0;
-                    if (c == "+") {
+                    if (c == "+")
+                    {
                         temp = num1 + num2;
                     }
 

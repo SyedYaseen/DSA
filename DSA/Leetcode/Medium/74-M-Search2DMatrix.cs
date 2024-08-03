@@ -1,17 +1,10 @@
-﻿using DSA.Leetcode.Medium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA.Leetcode.Medium
+﻿namespace DSA.Leetcode.Medium
 {
     public class Search2DMatrix
     {
- 
-            // Decent performance
-            public bool Soln(int[][] matrix, int target)
+
+        // Decent performance
+        public bool Soln(int[][] matrix, int target)
         {
 
             int l = 0;

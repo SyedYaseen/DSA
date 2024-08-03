@@ -4,7 +4,7 @@ public class GraphClass
 {
     public GraphClass()
     {
-        
+
     }
 
     public void DepthFirst(Dictionary<string, List<string>> graph)
@@ -13,9 +13,9 @@ public class GraphClass
         {
             Console.WriteLine(item);
         }
-        
+
     }
-    
-    
-    
+
+
+
 }

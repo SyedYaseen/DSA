@@ -8,7 +8,7 @@ namespace DSA.Leetcode.Easy
         {
             if (head._next == null) return head;
             Node node = null;
-                         
+
             while (head != null)
             {
                 var temp = head._next;

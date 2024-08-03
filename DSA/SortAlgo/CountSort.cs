@@ -19,7 +19,7 @@
 
             int j = 0;
 
-            for(int i=0; i < freq.Length; i++)
+            for (int i = 0; i < freq.Length; i++)
             {
                 if (freq[i] != 0)
                 {

@@ -4,7 +4,7 @@ public class ArrayClass<T> where T : IEquatable<T>
 {
     private T[] _items;
     private int count;
-    
+
     public ArrayClass(int size)
     {
         _items = new T[size];
@@ -36,7 +36,7 @@ public class ArrayClass<T> where T : IEquatable<T>
     private T[] CreateLongerList(int index = 0)
     {
         if (index == 0) return new T[_items.Length * 2];
-        else return new T[(index + 1)*2];
+        else return new T[(index + 1) * 2];
     }
 
     private void MoveItems(T[] newItems)
@@ -62,7 +62,7 @@ public class ArrayClass<T> where T : IEquatable<T>
         var index = IndexOf(item);
         if (index > -1)
         {
-            for (int i = index; i < _items.Length - 1 ; i++)
+            for (int i = index; i < _items.Length - 1; i++)
             {
                 _items[i] = _items[i + 1];
                 count--;
@@ -87,7 +87,7 @@ public class ArrayClass<T> where T : IEquatable<T>
         }
         return -1;
     }
-    
+
 
     public static ArrayClass<T> Intersect(T[] arr1, T[] arr2)
     {
@@ -109,5 +109,5 @@ public class ArrayClass<T> where T : IEquatable<T>
 
         return resultArr;
     }
-    
+
 }

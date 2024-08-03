@@ -1,12 +1,4 @@
-﻿using DSA.Leetcode.Medium;
-using DSA.Leetcode;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA.Leetcode.Medium
+﻿namespace DSA.Leetcode.Medium
 {
     internal class RemoveKthFromLastLinkedList
     {
@@ -30,7 +22,7 @@ namespace DSA.Leetcode.Medium
 
             count = count - n;
 
-            
+
 
             current = head;
             while (count > 1)
@@ -38,7 +30,7 @@ namespace DSA.Leetcode.Medium
                 current = current.next;
                 count--;
             }
-            if(current.next != null)  current.next = current.next.next;
+            if (current.next != null) current.next = current.next.next;
 
             return head;
         }

@@ -24,11 +24,11 @@ public class DictionaryClass
     {
         var position = GetHash(key);
         var entry = new Entry(key, value);
-        
+
         if (_dictionary[position] == null) _dictionary[position] = new LinkedList<Entry>();
 
         var Ll = _dictionary[position];
-        
+
         foreach (var node in Ll)
         {
             if (node._key == key)
@@ -45,7 +45,7 @@ public class DictionaryClass
         var position = GetHash(key);
         if (_dictionary[position] == null) throw new NullReferenceException("Doesnt exist");
         var Ll = _dictionary[position];
-        
+
         foreach (var node in Ll)
         {
             if (node._key == key) return node._value;

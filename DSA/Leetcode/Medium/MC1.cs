@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA.Leetcode.Medium
+﻿namespace DSA.Leetcode.Medium
 {
     internal class MC1
     {
@@ -43,7 +37,7 @@ namespace DSA.Leetcode.Medium
                         A[i] += sum;
                     }
 
-                    
+
                     result += Math.Abs(sum);
 
                 }

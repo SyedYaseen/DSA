@@ -1,6 +1,3 @@
-using System.Collections;
-using DSA.ArrayDSA;
-
 namespace DSA.StackClassDSA;
 
 public class StackClass
@@ -17,7 +14,7 @@ public class StackClass
     public void Push(int value)
     {
         if (_count < _size - 1) stack[++_count] = value;
-        
+
         else
         {
             NewStack();
@@ -53,11 +50,11 @@ public class StackClass
     {
         return _count > -1 ? true : false;
     }
-    
-    
-    
+
+
+
     public Stack<char> BracketStack = new Stack<char>();
-    public List<char> BracketsList = new List<char> { '{', '}', '<', '>', '(', ')'};
+    public List<char> BracketsList = new List<char> { '{', '}', '<', '>', '(', ')' };
 
     public Dictionary<char, char> Brackets = new Dictionary<char, char>()
     {
@@ -73,7 +70,7 @@ public class StackClass
             if (Brackets.ContainsKey(character) || Brackets.ContainsValue(character))
             {
                 if (BracketStack.Count != 0)
-                { 
+                {
                     if (Brackets[BracketStack.Peek()] == character) BracketStack.Pop();
                 }
                 else BracketStack.Push(character);

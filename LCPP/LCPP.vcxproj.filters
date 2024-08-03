@@ -54,6 +54,15 @@
     <ClInclude Include="Medium\CountAndSay-38-M.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Medium\CombinationSum-39-M.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="imports.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\Permutations-46-M.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA.Leetcode.Easy
+﻿namespace DSA.Leetcode.Easy
 {
     public class BinarySearch
     {
@@ -16,8 +10,8 @@ namespace DSA.Leetcode.Easy
 
             while (min <= max)
             {
-                int middle = min + (max - min ) / 2;
-               
+                int middle = min + (max - min) / 2;
+
                 if (target > nums[middle])
                     min = middle + 1;
                 else if (target < nums[middle])

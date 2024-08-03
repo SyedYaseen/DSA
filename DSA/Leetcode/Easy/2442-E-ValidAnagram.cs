@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-public class ValidAnagram
+﻿public class ValidAnagram
 {
 
     public bool IsAnagram(string s, string t)
@@ -19,14 +16,15 @@ public class ValidAnagram
         for (int i = 0; i < t.Length; i++)
         {
             if (!d.ContainsKey(t[i])) return false;
-            else {
+            else
+            {
                 d[t[i]] -= 1;
 
                 if (d[t[i]] == 0) d.Remove(t[i]);
             }
         }
 
-        if(d.Count != 0) return false;
+        if (d.Count != 0) return false;
 
         return true;
 

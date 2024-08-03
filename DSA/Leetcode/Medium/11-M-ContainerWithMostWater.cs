@@ -1,6 +1,4 @@
-﻿using DSA.Leetcode.Medium;
-
-namespace DSA.Leetcode.Medium
+﻿namespace DSA.Leetcode.Medium
 {
     public class ContainerWithMostWater
     {

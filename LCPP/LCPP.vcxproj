@@ -131,13 +131,16 @@
     <ClInclude Include="Easy\DiameterOfBinTree-543-E.h" />
     <ClInclude Include="Easy\InvertTree-226-E.h" />
     <ClInclude Include="Easy\MaximumDepthBinaryTree-104-E.h" />
+    <ClInclude Include="Medium\CombinationSum-39-M.h" />
     <ClInclude Include="Medium\CountAndSay-38-M.h" />
     <ClInclude Include="Medium\DecodeString-394-M.h" />
     <ClInclude Include="Medium\DecodeStringAtIndex-880-M.h" />
     <ClInclude Include="Medium\FindDuplicateNumber-287-M.h" />
     <ClInclude Include="Medium\GeneratePrantheses-22-M.h" />
+    <ClInclude Include="imports.h" />
     <ClInclude Include="Medium\LongestSubString-3-M.h" />
     <ClInclude Include="Medium\MinPenalty-2843-M.h" />
+    <ClInclude Include="Medium\Permutations-46-M.h" />
     <ClInclude Include="Medium\ReorgString-767-M.h" />
     <ClInclude Include="Tree.h" />
   </ItemGroup>

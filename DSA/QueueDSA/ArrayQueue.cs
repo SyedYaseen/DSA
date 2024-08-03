@@ -6,13 +6,13 @@ public class ArrayQueue
     public int _back = -1;
     public int _size = 0;
     private int[] ArrayQ;
-    
+
     public ArrayQueue(int size)
     {
         _size = size;
         ArrayQ = new int[_size];
     }
-    
+
     public int DeQueue()
     {
         if (_front < _back + 1) return ArrayQ[_front++];
@@ -24,10 +24,10 @@ public class ArrayQueue
         if (_front <= _back) return ArrayQ[_front];
         else throw new NullReferenceException("Empty Queue during Peek");
     }
-    
+
     public void EnQueue(int value)
     {
-        if(_back < _size - 1) ArrayQ[++_back] = value;
+        if (_back < _size - 1) ArrayQ[++_back] = value;
         else
         {
             NewArrayQueue();

@@ -7,7 +7,7 @@ public class TreeClass
     private Node? _root;
     private Node? _current;
     private List<int> treeTraversalResult = new();
-    
+
     private int _left;
     private int _right;
 
@@ -18,7 +18,7 @@ public class TreeClass
             _root = new Node(nodeValue);
             return;
         }
-        
+
         _current = _root;
         while (_current != null)
         {
@@ -28,7 +28,7 @@ public class TreeClass
                 {
                     _current.LeftChild = new Node(nodeValue);
                     return;
-                } 
+                }
                 _current = _current.LeftChild;
             }
 
@@ -38,7 +38,7 @@ public class TreeClass
                 {
                     _current.RightChild = new Node(nodeValue);
                     return;
-                } 
+                }
                 _current = _current.RightChild;
             }
 
@@ -47,17 +47,17 @@ public class TreeClass
 
     public bool Find(int value)
     {
-        if(_root != null)
+        if (_root != null)
         {
             _current = _root;
 
-            while(_current != null)
+            while (_current != null)
             {
-                if(_current.Value == value) return true;
+                if (_current.Value == value) return true;
 
-                if(value < _current.Value) _current = _current.LeftChild;
-   
-                if(value > _current.Value) _current = _current.RightChild;
+                if (value < _current.Value) _current = _current.LeftChild;
+
+                if (value > _current.Value) _current = _current.RightChild;
             }
         }
 
@@ -84,7 +84,7 @@ public class TreeClass
 
     public List<int> DepthInOrderTraversal()
     {
-        treeTraversalResult= new List<int>();
+        treeTraversalResult = new List<int>();
         DepthInOrder(_root!);
         return treeTraversalResult;
     }
@@ -93,7 +93,7 @@ public class TreeClass
     {
         if (node != null)
         {
-            if(node.LeftChild != null) DepthInOrder(node.LeftChild);
+            if (node.LeftChild != null) DepthInOrder(node.LeftChild);
             treeTraversalResult.Add(node.Value);
             if (node.RightChild != null) DepthInOrder(node.RightChild);
         }
@@ -109,25 +109,25 @@ public class TreeClass
     private void DepthPostOrder(Node node)
     {
         if (node == null) return;
-        
+
         DepthPostOrder(node.LeftChild);
         DepthPostOrder(node.RightChild);
         treeTraversalResult.Add(node.Value);
-    
+
     }
-    
+
     public int Height()
     {
         if (_root == null) return -1;
-       return Height(_root);
+        return Height(_root);
     }
 
     private int Height(Node node)
     {
-        if ((node.LeftChild == null && node.RightChild == null) ) return 0;
+        if ((node.LeftChild == null && node.RightChild == null)) return 0;
 
         return 1 + Math.Max(
-            Height(node?.LeftChild!), 
+            Height(node?.LeftChild!),
             Height(node?.RightChild!)
             );
     }
@@ -143,7 +143,7 @@ public class TreeClass
         if (node.LeftChild == null) return node.Value;
 
         var left = Min(node?.LeftChild);
-        
+
 
         return Math.Min(node.Value, left);
     }
@@ -152,22 +152,22 @@ public class TreeClass
     {
         return Equal(_root, other._root);
     }
-    
+
 
     public bool Equal(Node node1, Node node2)
     {
-        
+
         if (node1 == null && node2 == null) return true;
-        
-        if (node1 != null && node2 != null) return 
-            node1.Value == node2.Value && 
-            Equal(node1.LeftChild, node2.LeftChild) && 
+
+        if (node1 != null && node2 != null) return
+            node1.Value == node2.Value &&
+            Equal(node1.LeftChild, node2.LeftChild) &&
             Equal(node1.RightChild, node2.RightChild);
 
         return false;
     }
 
-    
+
     //Swap root - to mess with binary search tree
     public void SwapNodes()
     {
@@ -175,20 +175,20 @@ public class TreeClass
         _root.LeftChild = _root.RightChild;
         _root.RightChild = temp;
     }
-    
+
     public bool isBinarySearchTree()
     {
-        
+
         return isBinarySearchTree(_root, Int32.MinValue, Int32.MaxValue);
     }
 
-    private bool isBinarySearchTree( Node node, int? min, int? max)
+    private bool isBinarySearchTree(Node node, int? min, int? max)
     {
-        
+
         if (node == null) return true;
         if (node.Value < min || node.Value > max) return false;
 
-        return 
+        return
             isBinarySearchTree(node.LeftChild, min, node.Value - 1) &&
             isBinarySearchTree(node.RightChild, node.Value + 1, max);
     }
@@ -201,30 +201,30 @@ public class TreeClass
     }
     private void NodeAtKLevelRec(Node node, int count)
     {
-        if(node == null) return;
-        
+        if (node == null) return;
+
         if (count == 0)
         {
             _nodesAtK.Add(node.Value);
-    
-            
-            
+
+
+
             return;
         }
 
         if (node.LeftChild != null)
         {
-        //Adding count-- would reassign count to lesser value and will cause problems on the call below
+            //Adding count-- would reassign count to lesser value and will cause problems on the call below
             NodeAtKLevelRec(node.LeftChild, count - 1);
         }
 
         if (node.RightChild != null)
         {
-            
+
             NodeAtKLevelRec(node.RightChild, count - 1);
         }
     }
-    
+
     //BreathFirstSearch - this is a mdumb way to do it probably
     private List<int> breathFirst = new();
     public void BreadthFirst()
@@ -239,20 +239,20 @@ public class TreeClass
 
 
 
-    public class Node
+public class Node
+{
+    public int Value;
+    public Node? LeftChild;
+    public Node? RightChild;
+
+    public Node(int val)
     {
-        public int Value;
-        public Node? LeftChild;
-        public Node? RightChild;
-
-        public Node(int val)
-        {
-            Value = val;
-        }
-
-        public override string ToString()
-        {
-            return "Node=" + Value;
-        }
+        Value = val;
     }
+
+    public override string ToString()
+    {
+        return "Node=" + Value;
+    }
+}
 

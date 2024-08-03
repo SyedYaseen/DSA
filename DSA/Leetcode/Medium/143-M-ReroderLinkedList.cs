@@ -1,12 +1,4 @@
-﻿using DSA.Leetcode.Medium;
-using DSA.Leetcode;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA.Leetcode.Medium
+﻿namespace DSA.Leetcode.Medium
 {
     internal class ReroderLinkedList
     {
@@ -19,7 +11,7 @@ namespace DSA.Leetcode.Medium
             //Find middle of list - using slow and fast pointers
             ListNode middle = head;
             ListNode fast = head;
-            while (fast.next!=null && fast.next.next != null)
+            while (fast.next != null && fast.next.next != null)
             {
                 middle = middle.next;
                 fast = fast.next.next;
@@ -30,7 +22,7 @@ namespace DSA.Leetcode.Medium
 
             // reverse second half
             ListNode node = null;
-            
+
 
             while (secondHalf != null)
             {
@@ -42,7 +34,7 @@ namespace DSA.Leetcode.Medium
 
             //Add to head
             ListNode current = head;
-            while (node != null )
+            while (node != null)
             {
                 ListNode temp = current.next;
                 ListNode secondTemp = node.next;
@@ -58,7 +50,7 @@ namespace DSA.Leetcode.Medium
             {   // To avoid cyclic lists
                 current.next = null;
             }
-            
+
         }
     }
 }

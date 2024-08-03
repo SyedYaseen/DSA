@@ -1,12 +1,9 @@
-﻿using System.Runtime.CompilerServices;
-using DSA.LinkedListDSA;
-
-namespace DSA.AVLTreeDS;
+﻿namespace DSA.AVLTreeDS;
 
 public class AVLTree
 {
     private Node _root;
-    
+
     public void Insert(int nodeValue)
     {
         _root = Insert(nodeValue, _root);
@@ -15,52 +12,52 @@ public class AVLTree
     private Node Insert(int value, Node current)
     {
         if (current == null) return new Node(value);
-        
-        if (value < current.Value) 
+
+        if (value < current.Value)
             current.LeftChild = Insert(value, current.LeftChild);
 
-        else 
+        else
             current.RightChild = Insert(value, current.RightChild);
 
         current.Height = 1 + Math.Max(
-                                Height(current.LeftChild), 
+                                Height(current.LeftChild),
                                 Height(current.RightChild));
 
         current = Balance(current);
-        
-        
+
+
         return current;
-        
+
     }
-    
+
     private Node Balance(Node current)
     {
         if (BalanceFactor(current) > 1)
         {
             Console.WriteLine(current.Value + " is left heavy");
             var leftChildBalanceFactor = BalanceFactor(current.LeftChild);
-            
+
             if (leftChildBalanceFactor < 0)
             {
-                
+
                 Console.WriteLine("Left rotate " + current.LeftChild.Value);
                 current.RightChild = LeftRotation(current.LeftChild);
             }
             Console.WriteLine("Right rotate " + current.Value);
             return RightRotation(current);
         }
-        
+
         if (BalanceFactor(current) < -1)
         {
             Console.WriteLine(current.Value + " is right heavy");
             var rightChildBalanceFactor = BalanceFactor(current.RightChild);
-            
-            if ( rightChildBalanceFactor > 0)
+
+            if (rightChildBalanceFactor > 0)
             {
                 Console.WriteLine("Right rotate " + current.RightChild.Value);
                 current.LeftChild = RightRotation(current.RightChild);
             }
-            
+
             Console.WriteLine("Left rotate " + current.Value);
             return LeftRotation(current);
         }
@@ -72,7 +69,7 @@ public class AVLTree
         var newRoot = root.RightChild;
         root.RightChild = newRoot.LeftChild;
         newRoot.LeftChild = root;
-        
+
         SetHeight(root);
         SetHeight(newRoot);
 
@@ -84,7 +81,7 @@ public class AVLTree
         var newRoot = root.LeftChild;
         root.LeftChild = newRoot.RightChild;
         newRoot.RightChild = root;
-        
+
         SetHeight(root);
         SetHeight(newRoot);
 
@@ -93,10 +90,10 @@ public class AVLTree
 
     private void SetHeight(Node node)
     {
-        node.Height = 
-            Math.Max( Height(node.LeftChild), Height(node.RightChild)) + 1;
+        node.Height =
+            Math.Max(Height(node.LeftChild), Height(node.RightChild)) + 1;
     }
-    
+
     public int BalanceFactor(Node node)
     {
         return Height(node.LeftChild) - Height(node.RightChild);

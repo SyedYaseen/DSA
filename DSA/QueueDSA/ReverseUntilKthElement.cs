@@ -1,5 +1,3 @@
-using System.Collections;
-
 namespace DSA.QueueDSA;
 
 public static class ReverseUntilKthElement
@@ -9,7 +7,7 @@ public static class ReverseUntilKthElement
         Queue<int> result = new Queue<int>();
         Stack<int> tempStack = new Stack<int>();
         int count = 0;
-        
+
         while (count != k)
         {
             tempStack.Push(queue.Dequeue());

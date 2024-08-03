@@ -1,12 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using DSA.Leetcode;
-using DSA.Leetcode.Easy;
-using DSA.Leetcode.Hard;
 using DSA.Leetcode.Medium;
-using DSA.SortAlgo;
-using System.Collections.Generic;
-using System.Numerics;
 
 //var cl = new EncodeAndDecodeStrings();
 
@@ -88,6 +82,6 @@ using System.Numerics;
 var cl = new LongestRepeatingCharacterReplacement();
 var a = cl.Soln("ABAB", 2); //4
 var b = cl.Soln("AABABBA", 1); //4
-//cl.Soln(ll1, 2);
-//cl.Soln(ll2, 2);
-//cl.Soln(ll3, 1);
+                               //cl.Soln(ll1, 2);
+                               //cl.Soln(ll2, 2);
+                               //cl.Soln(ll3, 1);

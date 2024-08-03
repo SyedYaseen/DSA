@@ -1,11 +1,4 @@
-﻿using DSA.Leetcode.Medium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA.Leetcode.Medium
+﻿namespace DSA.Leetcode.Medium
 {
     internal class LongestRepeatingCharacterReplacement
     {
@@ -24,14 +17,15 @@ namespace DSA.Leetcode.Medium
 
                 if (h.ContainsKey(s[j])) h[s[j]] += 1;
                 else h.Add(s[j], 1);
-                
+
                 if (h[s[j]] > highest) highest = h[s[j]];
 
                 if (j - i + 1 - highest <= k)
                 {
                     result = j - i + 1;
                     j++;
-                } else
+                }
+                else
                 {
                     h[s[i]] -= 1;
                     i++;

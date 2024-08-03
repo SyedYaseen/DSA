@@ -18,9 +18,6 @@
     <ClCompile Include="Basics\CPP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Basics\HeaderCpp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Basics\OOP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -28,9 +25,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Basics\Rectangle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Basics\Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Basics\User.cpp">
@@ -62,8 +56,5 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeTuts\CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="CMakeTuts\notes.md" />
   </ItemGroup>
 </Project>

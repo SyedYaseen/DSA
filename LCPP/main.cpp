@@ -1,11 +1,14 @@
-#include <iostream>
-#include <vector>
+#include "imports.h"
 #include "Tree.h"
 using namespace std;
-#include "./Medium/CountAndSay-38-M.h"
+//#include "./Medium/CountAndSay-38-M.h"
+#include "./Medium/Permutations-46-M.h"
 int main() {
 	Solution s;
-	s.countAndSay(4);
+	vector<int> t1{ 2, 3, 6, 7 };
+	vector<int> t2{ 1,2,3};
+	s.permute(t2);
+	//s.countAndSay(4);
 	
 	//s.decodeAtIndex("leet2code3", 10);
 	 //s.decodeAtIndex("a23bc23", 42);

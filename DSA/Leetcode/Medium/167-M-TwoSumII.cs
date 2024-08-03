@@ -1,16 +1,9 @@
-﻿using DSA.Leetcode.Medium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA.Leetcode.Medium
+﻿namespace DSA.Leetcode.Medium
 {
     public class TwoSumII
     {
-        public int[] Soln(int[] numbers, int target) 
-        { 
+        public int[] Soln(int[] numbers, int target)
+        {
             var result = new int[2];
 
             int i = 0;
@@ -22,7 +15,7 @@ namespace DSA.Leetcode.Medium
                 else if (numbers[i] + numbers[j] > target) j--;
                 else
                 {
-                    result = [i,j];
+                    result = [i, j];
                     break;
                 }
             }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA.Leetcode.Medium
+﻿namespace DSA.Leetcode.Medium
 {
     public class TopKFrequent
     {
@@ -23,19 +17,20 @@ namespace DSA.Leetcode.Medium
 
             foreach (var entry in kv)
             {
-               
+
                 if (freq[entry.Value] == null)
                 {
                     freq[entry.Value] = new List<int>() { entry.Key };
                 }
                 else
                 {
-                    freq[entry.Value].Add(entry.Key);                }
+                    freq[entry.Value].Add(entry.Key);
+                }
             }
 
             for (int i = freq.Length - 1; i > 0 && k > 0; i--)
             {
-                if(freq[i] != null)
+                if (freq[i] != null)
                 {
                     freq[i].ToList().ForEach(i =>
                     {
@@ -46,8 +41,8 @@ namespace DSA.Leetcode.Medium
 
             }
 
-            return result; 
-        
+            return result;
+
         }
 
         // Create a dict which has num as key and value as frequency
@@ -61,13 +56,13 @@ namespace DSA.Leetcode.Medium
 
 
 
-        public int[] Soln2(int[] nums, int k) 
+        public int[] Soln2(int[] nums, int k)
         {
             Dictionary<int, int> kv = new();
-            for (int i = 0; i < nums.Length; i++) 
+            for (int i = 0; i < nums.Length; i++)
             {
                 if (kv.ContainsKey(nums[i])) kv[nums[i]]++;
-                else kv[nums[i]] = 1;            
+                else kv[nums[i]] = 1;
             }
 
             var s = new List<int>();
@@ -80,7 +75,7 @@ namespace DSA.Leetcode.Medium
                     if (entry.Value > kv[highest]) highest = entry.Key;
                 }
                 kv.Remove(highest);
-                result[k-1]=highest;
+                result[k - 1] = highest;
                 k -= 1;
             }
 

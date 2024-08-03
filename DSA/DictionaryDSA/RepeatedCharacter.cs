@@ -4,7 +4,7 @@ public class RepeatedCharacter
 {
     private Dictionary<char, int> _dictionary;
     private Dictionary<int, int> _intDictionary;
-    
+
     private HashSet<char> _set;
 
     public RepeatedCharacter()
@@ -25,10 +25,10 @@ public class RepeatedCharacter
         }
         return Char.MinValue;
     }
-    
+
     public char FindNonRepeatedChar(string value)
     {
-        char result = ' ' ;
+        char result = ' ';
         foreach (var i in value)
         {
             if (!_dictionary.ContainsKey(i))
@@ -60,7 +60,7 @@ public class RepeatedCharacter
                 _dictionary[i] += 1;
                 result = result < _dictionary[i] ? _dictionary[i] : result;
             }
-            
+
             else _dictionary.Add(i, 1);
         }
         return result;
@@ -77,10 +77,10 @@ public class RepeatedCharacter
                 // _intDictionary[i] += 1;
                 result++;
             }
-            
+
             else _intDictionary.Add(i, 1);
         }
-        
+
         return result;
     }
 }

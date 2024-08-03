@@ -128,11 +128,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Basics\CPP.cpp" />
-    <ClCompile Include="Basics\HeaderCpp.cpp" />
     <ClCompile Include="Basics\OOP.cpp" />
     <ClCompile Include="Basics\Phone.cpp" />
     <ClCompile Include="Basics\Rectangle.cpp" />
-    <ClCompile Include="Basics\Source.cpp" />
     <ClCompile Include="Basics\User.cpp" />
     <ClCompile Include="CMakeTuts\main.cpp" />
   </ItemGroup>
@@ -146,9 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeTuts\CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="CMakeTuts\notes.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

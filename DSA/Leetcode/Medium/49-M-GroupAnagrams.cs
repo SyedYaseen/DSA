@@ -1,23 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-public class GroupAnagrams
+﻿public class GroupAnagrams
 {
-    public IList<IList<string>> Soln(string[] strs) {
+    public IList<IList<string>> Soln(string[] strs)
+    {
         var result = new List<IList<string>>();
         var mp = new Dictionary<string, List<string>>();
         for (int i = 0; i < strs.Length; i++)
         {
-            
-              
+
+
             var chars = strs[i].ToArray();
             Array.Sort(chars);
             var sortedStr = string.Join("", chars);
 
-            if(sortedStr != null && mp.ContainsKey(sortedStr))
+            if (sortedStr != null && mp.ContainsKey(sortedStr))
                 mp[sortedStr].Add(strs[i]);
-            else mp.Add(sortedStr, new List<string>(){ strs[i] });
+            else mp.Add(sortedStr, new List<string>() { strs[i] });
         }
         foreach (var item in mp.Values)
         {
@@ -27,20 +24,20 @@ public class GroupAnagrams
 
         return result;
     }
-    
+
     // This code only beats 5%
 
     public IList<IList<string>> Soln1(string[] strs)
-	{
+    {
         var s = strs.ToList();
-        var result= new List<IList<string>>();
+        var result = new List<IList<string>>();
 
-		while (s.Count != 0)
-		{
+        while (s.Count != 0)
+        {
             var last = s[^1];
             s.RemoveAt(s.Count - 1);
             var innerList = new List<string>() { last };
-            
+
             for (int i = 0; i < s.Count; i++)
             {
                 if (IsAnagram(s[i], last))
@@ -55,7 +52,7 @@ public class GroupAnagrams
         }
 
         return result;
-	}
+    }
 
     public bool IsAnagram(string s, string t)
     {

@@ -1,7 +1,4 @@
-﻿
-using DSA.Leetcode.Medium;
-
-namespace DSA.Leetcode.Medium
+﻿namespace DSA.Leetcode.Medium
 {
     public class LongestConsecutiveSequence
     {
@@ -9,10 +6,10 @@ namespace DSA.Leetcode.Medium
         public int Soln(int[] nums)
         {
             if (nums.Length == 0) return 0;
-           
+
             Array.Sort(nums);
             int count = 1;
-            int maxCount = 1; 
+            int maxCount = 1;
             for (int i = 0; i < nums.Length - 1; i++)
             {
                 if (nums[i] + 1 == nums[i + 1])
@@ -38,22 +35,22 @@ namespace DSA.Leetcode.Medium
                 if (!set.Contains(nums[i] - 1))
                 {
                     int count = 1;
-                 
+
                     while (set.Contains(nums[i] + count))
                     {
                         count++;
                     }
-                    if(count > result ) result = count;
+                    if (count > result) result = count;
                 }
             }
 
             return result;
         }
 
-            // Fails runtime for very large numbers
-            public int Soln2(int[] nums)
+        // Fails runtime for very large numbers
+        public int Soln2(int[] nums)
         {
-            if(nums.Length <=1 ) return nums.Length;
+            if (nums.Length <= 1) return nums.Length;
 
             int result = 0;
             int highest = int.MinValue;
@@ -71,7 +68,7 @@ namespace DSA.Leetcode.Medium
             for (int i = 0; i < nums.Length; i++)
             {
                 if (nums[i] >= 0) freqPositive[nums[i]]++;
-                else freqNegative[Math.Abs(nums[i])]++; 
+                else freqNegative[Math.Abs(nums[i])]++;
             }
 
             int current = 0;
@@ -97,7 +94,7 @@ namespace DSA.Leetcode.Medium
                 else current = 0;
             }
 
-            return result; 
+            return result;
         }
     }
 }

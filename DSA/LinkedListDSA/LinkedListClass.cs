@@ -1,5 +1,3 @@
-using System.Xml;
-
 namespace DSA.LinkedListDSA;
 
 public class Node
@@ -87,9 +85,9 @@ public class LinkedListClass
 
     public int RemoveFirst()
     {
-        
+
         if (First == null) throw new NullReferenceException("Onnum illa");
-        
+
         else if (First == Last)
         {
             result = First.GetValue();
@@ -111,7 +109,7 @@ public class LinkedListClass
     public int RemoveLast()
     {
         if (First == null) return -1;
-        
+
         else if (First == Last)
         {
             First = Last = null;
@@ -123,7 +121,7 @@ public class LinkedListClass
         {
             var node = First;
             Node prevNode = null!;
-            
+
             while (node._next != null)
             {
                 prevNode = node;
@@ -136,11 +134,11 @@ public class LinkedListClass
             return 1;
         }
     }
-    
+
     public int[] ToArray()
     {
         if (First == null) return new int[0];
-        
+
         var arr = new int[GetSize()];
         var node = First;
         int count = 0;
@@ -160,11 +158,11 @@ public class LinkedListClass
 
         Last = First;
         Last._next = null;
-        
+
         while (current != null)
         {
             var next = current._next;
-            
+
             current._next = previous;
             previous = current;
             current = next;
@@ -182,14 +180,14 @@ public class LinkedListClass
         int distance = 0;
         int size = 0;
 
-        while (current._next!= null)
+        while (current._next != null)
         {
             current = current._next;
             size++;
             if (distance < k) distance++;
             if (distance == k) result = result._next;
         }
-        
+
         if (k > size) throw new ArgumentOutOfRangeException();
         return result.GetValue();
     }
@@ -203,15 +201,15 @@ public class LinkedListClass
         Node a = First;
         Node b = First;
 
-        while (b!=Last && b._next!= Last)
+        while (b != Last && b._next != Last)
         {
             b = b._next._next;
             a = a._next;
         }
-        
+
         Console.WriteLine(
-            b == Last ? 
-                a.GetValue() : 
+            b == Last ?
+                a.GetValue() :
                 (a.GetValue(), a._next.GetValue()));
 
 
@@ -239,7 +237,7 @@ public class LinkedListClass
         var slow = First;
         var fast = First;
 
-        while (fast!= Last && fast._next!= Last)
+        while (fast != Last && fast._next != Last)
         {
             fast = fast._next._next;
             slow = slow._next;
@@ -249,7 +247,7 @@ public class LinkedListClass
 
         return false;
     }
-    
+
     public int GetSize()
     {
         return size;

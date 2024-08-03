@@ -10,7 +10,7 @@ namespace DSA.Leetcode.Medium
         {
             Reverse(nums, 0, nums.Length - 1, GetMiddle(nums.Length));
             Reverse(nums, 0, k - 1, GetMiddle(k));
-            Reverse(nums, k , nums.Length - 1, k + GetMiddle(nums.Length - k));
+            Reverse(nums, k, nums.Length - 1, k + GetMiddle(nums.Length - k));
         }
 
         public int GetMiddle(int num)

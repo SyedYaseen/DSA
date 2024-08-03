@@ -17,10 +17,11 @@ namespace DSA.Leetcode.Easy
             {
                 if (!brackets.ContainsKey(s[i])) st.Push(s[i]);
 
-                if (brackets.ContainsKey(s[i])) {
+                if (brackets.ContainsKey(s[i]))
+                {
                     if (st.Count == 0) return false;
 
-                    if(st.Pop() != brackets[s[i]]) 
+                    if (st.Pop() != brackets[s[i]])
                         return false;
 
                 }
@@ -54,5 +55,5 @@ namespace DSA.Leetcode.Easy
         }
     }
 
-    
+
 }

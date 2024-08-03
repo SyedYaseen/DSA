@@ -1,6 +1,4 @@
-﻿using DSA.Leetcode.Easy;
-
-namespace DSA.Leetcode.Easy
+﻿namespace DSA.Leetcode.Easy
 {
     public class BinaryGap
     {
@@ -12,7 +10,7 @@ namespace DSA.Leetcode.Easy
             bool left = false;
 
             while (n > 0)
-            {  
+            {
                 var mod = n % 2;
                 if (left)
                 {
@@ -29,7 +27,7 @@ namespace DSA.Leetcode.Easy
                 else
                 {
                     if (mod == 1) left = true;
-                    
+
                 }
                 n = n / 2;
             }
@@ -42,7 +40,7 @@ namespace DSA.Leetcode.Easy
 
         // Bad time complexity
 
-            public int Soln2(int n)
+        public int Soln2(int n)
         {
             if (n == 1)
             {
@@ -59,7 +57,8 @@ namespace DSA.Leetcode.Easy
                     binary = "10" + binary;
                     break;
                 }
-                else if (n == 1) {
+                else if (n == 1)
+                {
                     binary = "1" + binary;
                     break;
                 }
