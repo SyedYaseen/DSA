@@ -141,6 +141,7 @@
     <ClInclude Include="imports.h" />
     <ClInclude Include="Medium\GroupAnagrams-49-M.h" />
     <ClInclude Include="Medium\LongestSubString-3-M.h" />
+    <ClInclude Include="Medium\MaxAreaIsland-695-M.h" />
     <ClInclude Include="Medium\MinPenalty-2843-M.h" />
     <ClInclude Include="Medium\NumIslands-200-M.h" />
     <ClInclude Include="Medium\Permutations-46-M.h" />

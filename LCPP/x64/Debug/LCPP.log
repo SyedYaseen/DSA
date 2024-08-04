@@ -1,4 +1,1 @@
-﻿  main.cpp
-C:\Users\ssyed\Documents\Projects\DSA\LCPP\Medium\NumIslands-200-M.h(8,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\ssyed\Documents\Projects\DSA\LCPP\Medium\NumIslands-200-M.h(9,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  LCPP.vcxproj -> C:\Users\ssyed\Documents\Projects\DSA\x64\Debug\LCPP.exe
+﻿  LCPP.vcxproj -> C:\Users\ssyed\Documents\Projects\DSA\x64\Debug\LCPP.exe
