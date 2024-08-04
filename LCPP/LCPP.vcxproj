@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -138,14 +139,19 @@
     <ClInclude Include="Medium\FindDuplicateNumber-287-M.h" />
     <ClInclude Include="Medium\GeneratePrantheses-22-M.h" />
     <ClInclude Include="imports.h" />
+    <ClInclude Include="Medium\GroupAnagrams-49-M.h" />
     <ClInclude Include="Medium\LongestSubString-3-M.h" />
     <ClInclude Include="Medium\MinPenalty-2843-M.h" />
+    <ClInclude Include="Medium\NumIslands-200-M.h" />
     <ClInclude Include="Medium\Permutations-46-M.h" />
     <ClInclude Include="Medium\ReorgString-767-M.h" />
     <ClInclude Include="Tree.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

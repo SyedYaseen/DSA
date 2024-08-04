@@ -63,10 +63,19 @@
     <ClInclude Include="Medium\Permutations-46-M.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Medium\NumIslands-200-M.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Medium\GroupAnagrams-49-M.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
   </ItemGroup>
 </Project>

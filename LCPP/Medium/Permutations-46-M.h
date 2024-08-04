@@ -1,34 +1,39 @@
 #pragma once
 #include "../imports.h"
-
+//vector<int> t1{ 2, 3, 6, 7 };
+//vector<int> t2{ 1,2,3 };
+//s.permute(t2);
 class Solution {
 public:
     vector<vector<int>> res;
-    void backtrack(int start, vector<int>& nums) {
-        if (start > nums.size() - 2) return;
 
-        int temp = nums[nums.size() - 1];
+    void shiftRight(int last, vector<int>& nums) {
 
-        for (int i = nums.size() - 2; i >= start; i--) {
-            nums[i + 1] = nums[i];
+        while (last > 0) {
+            
+            int temp = nums[last];
+            for (int i = last - 1; i >= 0; i--) {
+                nums[i + 1] = nums[i];
+            }
+            nums[0] = temp;
+
+
+            res.push_back(nums);
+
+            shiftRight(last - 1, nums);
         }
-        nums[0] = temp;
-
-        res.push_back(nums);
-
-        backtrack(start + 1, nums);
-
-
     }
 
     vector<vector<int>> permute(vector<int>& nums) {
-        // move items by 1 pos until all combos are present,
-        // keep doing recursively until index is
         
-        backtrack(0, nums);
+        int sz = nums.size();
+        
+
+        int last = nums.size() - 1;
+
+        shiftRight(last, nums);
 
         return res;
-
     }
 };
 
