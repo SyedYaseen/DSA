@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Medium\RottingOranges-994-M.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\RottingOranges-994-M.h.obj",
+            "outputs": [
+                "C:\\Users\\ssyed\\Documents\\Projects\\DSA\\LCPP\\x64\\Debug\\vc143.pdb",
+                "x64\\Debug\\",
+                "C:\\Users\\ssyed\\Documents\\Projects\\DSA\\LCPP\\x64\\Debug\\RottingOranges-994-M.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "Medium\\RottingOranges-994-M.h",
+                    "source-path": "c:\\users\\ssyed\\documents\\projects\\dsa\\lcpp\\medium\\rottingoranges-994-m.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
