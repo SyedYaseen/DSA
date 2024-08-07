@@ -61,3 +61,6 @@ CMakeUserPresets.json
 *.app
 
 [Bb][Uu][Ii][Ll][Dd]
+LCPP/x64
+LCPP/x64/Debug/LCPP.log
+

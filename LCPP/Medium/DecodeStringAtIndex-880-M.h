@@ -1,6 +1,15 @@
 using namespace std;
-#include <iostream>
-#include <string>
+#include "../imports.h"
+
+//s.decodeAtIndex("leet2code3", 10);
+ //s.decodeAtIndex("a23bc23", 42);
+ /*s.decodeAtIndex("a2b3c4d5e6f7g8h9", 10);*/
+// s.decodeAtIndex("ha22", 5);
+ // s.decodeAtIndex("y959q969u3hb22odq595", 222280369);
+ // s.decodeAtIndex("gl2sld3935dz5wx5r64x", 1392818);
+ //s.decodeAtIndex("a2345678999999999999999", 1);
+ //s.decodeAtIndex("a23b23", 41);
+
 class Solution {
 public:
 

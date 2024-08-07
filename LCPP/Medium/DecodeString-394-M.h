@@ -1,5 +1,6 @@
 #pragma once
-
+//string a = s.decodeString("zxy3[a]2[bc]");
+//string b = s.decodeString("zxy3[a2[c]]");
 #include <iostream>
 using namespace std;
 class Solution {

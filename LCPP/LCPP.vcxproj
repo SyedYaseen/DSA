@@ -107,7 +107,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -144,12 +144,12 @@
     <ClInclude Include="Medium\MaxAreaIsland-695-M.h" />
     <ClInclude Include="Medium\MinPenalty-2843-M.h" />
     <ClInclude Include="Medium\NumIslands-200-M.h" />
+    <ClInclude Include="Medium\PacificAtlanticWaterFlow-417-M.cpp" />
     <ClInclude Include="Medium\Permutations-46-M.h" />
     <ClInclude Include="Medium\ReorgString-767-M.h" />
     <ClInclude Include="Tree.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="Medium\RottingOranges-994-M.h" />
   </ItemGroup>
   <ItemGroup>

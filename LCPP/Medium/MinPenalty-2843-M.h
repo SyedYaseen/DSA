@@ -1,6 +1,9 @@
 #pragma once
 #include<iostream>
 using namespace std;
+
+//int a = s.bestClosingTime("YYNY");
+//int a = s.bestClosingTime("NYNNNYYN"); // ans 0
 class Solution {
 public:
     int bestClosingTime(string customers) {
