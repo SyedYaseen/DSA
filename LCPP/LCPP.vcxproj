@@ -139,6 +139,7 @@
     <ClInclude Include="Medium\FindDuplicateNumber-287-M.h" />
     <ClInclude Include="Medium\GeneratePrantheses-22-M.h" />
     <ClInclude Include="imports.h" />
+    <ClInclude Include="Medium\Graphs\RottingOranges-994-M.cpp" />
     <ClInclude Include="Medium\GroupAnagrams-49-M.h" />
     <ClInclude Include="Medium\LongestSubString-3-M.h" />
     <ClInclude Include="Medium\MaxAreaIsland-695-M.h" />
