@@ -32,7 +32,7 @@ public:
     }
 };
 
-int main()
+int mainkth()
 {
     Solution s;
     TreeNode *root = nullptr;

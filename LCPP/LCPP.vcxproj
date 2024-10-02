@@ -132,6 +132,8 @@
     <ClInclude Include="Easy\DiameterOfBinTree-543-E.h" />
     <ClInclude Include="Easy\InvertTree-226-E.h" />
     <ClInclude Include="Easy\MaximumDepthBinaryTree-104-E.h" />
+    <ClInclude Include="Medium\Backtracking\CombinationSum-39-M.h" />
+    <ClInclude Include="Medium\Backtracking\GeneratePrantheses-22-M.h" />
     <ClInclude Include="Medium\CombinationSum-39-M.h" />
     <ClInclude Include="Medium\CountAndSay-38-M.h" />
     <ClInclude Include="Medium\DecodeString-394-M.h" />
@@ -139,7 +141,8 @@
     <ClInclude Include="Medium\FindDuplicateNumber-287-M.h" />
     <ClInclude Include="Medium\GeneratePrantheses-22-M.h" />
     <ClInclude Include="imports.h" />
-    <ClInclude Include="Medium\Graphs\RottingOranges-994-M.cpp" />
+    <ClInclude Include="Medium\Graphs\MaxAreaIsland-695-M.h" />
+    <ClInclude Include="Medium\Graphs\NumIslands-200-M.h" />
     <ClInclude Include="Medium\GroupAnagrams-49-M.h" />
     <ClInclude Include="Medium\LongestSubString-3-M.h" />
     <ClInclude Include="Medium\MaxAreaIsland-695-M.h" />
@@ -151,10 +154,22 @@
     <ClInclude Include="Tree.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Medium\Backtracking\Permutations-46-M.cpp" />
+    <ClCompile Include="Medium\Backtracking\SubSetsII-90-M.cpp" />
+    <ClCompile Include="Medium\Dp\ExtraCharInString-2707-M.cpp" />
+    <ClCompile Include="Medium\Graphs\CanFinishCourses.cpp" />
+    <ClCompile Include="Medium\Graphs\PacificAtlanticWaterFlow-417-M.cpp" />
+    <ClCompile Include="Medium\Graphs\SurroundedRegions.-130-M.cpp" />
+    <ClCompile Include="Medium\Greedy\RemoveDuplicateLetters-316-M.cpp" />
+    <ClCompile Include="Medium\Heap\TaskScheduler621M.cpp" />
     <ClCompile Include="Medium\RottingOranges-994-M.h" />
+    <ClCompile Include="Medium\SlidingWindow\PermutationStr-567-M.cpp" />
+    <ClCompile Include="Medium\Stack\CarFleet.cpp" />
+    <ClCompile Include="Medium\Tree\kThSmallest-294-M.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+    <None Include="revisit.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
