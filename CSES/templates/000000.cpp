@@ -31,7 +31,7 @@ void setIO()
 
 int main()
 {
-    setIO();
+    setIO("./tests/1");
 }
 
 // g++ -std=c++11 -O2 -Wall 000000.cpp -o test; .\test.exe
