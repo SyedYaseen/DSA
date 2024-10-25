@@ -5,12 +5,10 @@ void setIO(string name)
 {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    freopen((name + ".in").c_str(), "r", stdin);
-    freopen((name + ".out").c_str(), "w", stdout);
+    freopen(("../tests/IntroductoryProblems/TwoKnights1072/" + name + ".in").c_str(), "r", stdin);
 }
 
 int main()
 {
-    setIO("./tests/1");
+    setIO("1");
 }
-                       
