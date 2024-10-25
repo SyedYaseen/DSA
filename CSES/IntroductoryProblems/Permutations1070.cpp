@@ -28,14 +28,14 @@ int main()
 
     while (n > 0)
     {
-        if (n % 2)
+        if (n & 0b1)
             cout << n << " ";
         n--;
     }
 
     while (l > 0)
     {
-        if (!(l % 2))
+        if (!(l & 0b1))
             cout << l << " ";
         l--;
     }
