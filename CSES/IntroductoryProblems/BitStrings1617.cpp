@@ -1,12 +1,21 @@
-
 #include <bits/stdc++.h>
-#define ll long long
+#include "./helper.h"
 using namespace std;
 
-int main()
-{
-    ll n;
-    cin >> n;
+int main() {
+    setIO("/home/uggi/projects/DSA/CSES/tests/IntroductoryProblems/BitStrings1617/1.in") ;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-    cout << pow(2, n);
+    // CSES Problem: BitStrings (1617)
+    // Reads from stdin, writes to stdout
+    // Sample usage for debugging against test files:
+    // freopen("input.in", "r", stdin);
+    // freopen("output.out", "w", stdout);
+
+    int n;
+    cin >> n;
+    cout << n << "\n";
+
+    return 0;
 }

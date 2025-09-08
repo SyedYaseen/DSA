@@ -1,29 +1,21 @@
-
 #include <bits/stdc++.h>
+#include "./helper.h"
 using namespace std;
-void setIO(string name)
-{
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    freopen(("../tests/IntroductoryProblems/TwoKnights1072/" + name + ".in").c_str(), "r", stdin);
-}
 
-int main()
-{
-    setIO("1");
-    long long int k = 5;
-    // cin >> k;
+int main() {
+    setIO("/home/uggi/projects/DSA/CSES/tests/IntroductoryProblems/TwoKnights1072/1.in") ;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-    long long int total = 0;
-    long long int atkPos = 0;
+    // CSES Problem: TwoKnights (1072)
+    // Reads from stdin, writes to stdout
+    // Sample usage for debugging against test files:
+    // freopen("input.in", "r", stdin);
+    // freopen("output.out", "w", stdout);
 
-    for (int n = 1; n <= k; n++)
-    {
-        // Combination: nSqr * (nSqr -1) / # of options
-        total = (n * n) * ((n * n) - 1) >> 1;
+    int n;
+    cin >> n;
+    cout << n << "\n";
 
-        // For each n sized board, the attack pattern (2x3) can be moved n-1 and there are two attacks that can happen on each pattern, multiplied by (3x2) which can be moved (n-2) times.
-        atkPos = (n - 1) * (n - 2) << 2;
-        cout << n << " : " << total - atkPos << "\n";
-    }
+    return 0;
 }

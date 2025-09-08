@@ -1,16 +1,21 @@
-
 #include <bits/stdc++.h>
+#include "./helper.h"
 using namespace std;
-void setIO(string name)
-{
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    freopen((name + ".in").c_str(), "r", stdin);
-    freopen((name + ".out").c_str(), "w", stdout);
-}
 
-int main()
-{
-    setIO("./tests/1");
+int main() {
+    setIO("/home/uggi/projects/DSA/CSES/tests/AdditionalProblems/StronglyConnectedEdges2177/1.in") ;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    // CSES Problem: StronglyConnectedEdges (2177)
+    // Reads from stdin, writes to stdout
+    // Sample usage for debugging against test files:
+    // freopen("input.in", "r", stdin);
+    // freopen("output.out", "w", stdout);
+
+    int n;
+    cin >> n;
+    cout << n << "\n";
+
+    return 0;
 }
-                       

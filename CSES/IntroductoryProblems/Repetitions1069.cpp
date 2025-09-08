@@ -1,34 +1,21 @@
 #include <bits/stdc++.h>
-
+#include "./helper.h"
 using namespace std;
-void setIO(string name)
-{
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    freopen(("../tests/IntroductoryProblems/Repetitions1069/" + name + ".in").c_str(), "r", stdin);
-}
 
-int main()
-{
-    setIO("2");
+int main() {
+    setIO("/home/uggi/projects/DSA/CSES/tests/IntroductoryProblems/Repetitions1069/1.in") ;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-    string a;
-    unsigned int i = 0, j = 0, max = 0;
-    cin >> a;
+    // CSES Problem: Repetitions (1069)
+    // Reads from stdin, writes to stdout
+    // Sample usage for debugging against test files:
+    // freopen("input.in", "r", stdin);
+    // freopen("output.out", "w", stdout);
 
-    while (j < a.size())
-    {
-        if (a[i] == a[j])
-        {
-            j++;
-            if (j - i + 1 > max)
-                max = j - i + 1;
-        }
-        else
-        {
-            i = j;
-        }
-    }
+    int n;
+    cin >> n;
+    cout << n << "\n";
 
-    cout << max - 1;
+    return 0;
 }

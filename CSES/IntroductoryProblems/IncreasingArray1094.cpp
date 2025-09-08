@@ -1,30 +1,21 @@
-
 #include <bits/stdc++.h>
+#include "./helper.h"
 using namespace std;
-void setIO(string name)
-{
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
 
-    freopen(("../tests/IntroductoryProblems/IncreasingArray1094/" + name + ".in").c_str(), "r", stdin);
+int main() {
+    setIO("/home/uggi/projects/DSA/CSES/tests/IntroductoryProblems/IncreasingArray1094/1.in") ;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    // CSES Problem: IncreasingArray (1094)
+    // Reads from stdin, writes to stdout
+    // Sample usage for debugging against test files:
+    // freopen("input.in", "r", stdin);
+    // freopen("output.out", "w", stdout);
+
+    int n;
+    cin >> n;
+    cout << n << "\n";
+
+    return 0;
 }
-
-int main()
-{
-    setIO("6");
-    long long unsigned int curr = 0, max = 0, count = 0;
-    cin >> curr;
-
-    cin >> curr;
-    max = curr;
-    while (cin >> curr)
-    {
-        if (max < curr)
-            max = curr;
-        if (max > curr)
-            count += max - curr;
-    }
-    cout << count;
-}
-
-// g++ -std=c++11 -O2 -Wall IncreasingArray1094.cpp -o test; .\test.exe

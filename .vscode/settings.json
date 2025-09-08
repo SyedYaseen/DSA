@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.dbclient-js": "javascript",
+        "chrono": "cpp",
+        "span": "cpp",
+        "type_traits": "cpp",
+        "string": "cpp",
+        "format": "cpp"
+    }
+}
