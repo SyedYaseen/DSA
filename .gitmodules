@@ -1,3 +1,0 @@
-[submodule "CPPStuff/CMakeTuts/external/glfw"]
-	path = CPPStuff/CMakeTuts/external/glfw
-	url = https://github.com/glfw/glfw.git
