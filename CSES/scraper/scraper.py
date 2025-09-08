@@ -9,7 +9,7 @@ PROBLEM_URL = BASE_URL + "/problemset/task/"
 TEST_URL = BASE_URL + "/problemset/tests/"
 
 # Where everything is stored
-BASE_DIR = "./cses_problems"
+BASE_DIR = "./rust"
 TEST_DIR = os.path.join(BASE_DIR, "tests")
 
 # --- COOKIE SETUP ---
@@ -69,6 +69,43 @@ int main() {{
 """)
     return cpp_filename
 
+
+def create_rust(problem_heading, problem_number, problem_name):
+    """Create a Rust file in src/bin so it can be run individually with cargo run --bin"""
+    bin_dir = os.path.join(RUST_PROJECT, "src", "bin")
+    os.makedirs(bin_dir, exist_ok=True)
+
+    rust_filename = os.path.join(bin_dir, f"{problem_name}{problem_number}.rs")
+
+    # Path to test folder
+    test_folder = os.path.join(TEST_DIR, problem_heading, f"{problem_name}{problem_number}")
+    os.makedirs(test_folder, exist_ok=True)
+
+    # Pick a test file if available
+    test_files = [f for f in os.listdir(test_folder) if f.endswith(".in")]
+    test_path = os.path.join(test_folder, test_files[0]) if test_files else "input.in"
+
+    if not os.path.exists(rust_filename):
+        with open(rust_filename, "w") as rust_file:
+            rust_file.write(f"""use std::fs::File;
+use std::io::{{self, BufRead, BufReader}};
+
+fn main() {{
+    // CSES Problem: {problem_name} ({problem_number})
+    // Reads from test file or stdin
+
+    let path = "{test_path}";
+    let file = File::open(path).expect("Failed to open input file");
+    let mut reader = BufReader::new(file);
+
+    let mut line = String::new();
+    reader.read_line(&mut line).unwrap();
+    let n: i64 = line.trim().parse().unwrap();
+
+    println!("n = {{}}", n);
+}}
+""")
+    return rust_filename
 
 def download_tests(problem_number, tests_dir):
     os.makedirs(tests_dir, exist_ok=True)
