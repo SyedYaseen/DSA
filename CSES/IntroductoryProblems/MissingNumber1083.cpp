@@ -1,21 +1,20 @@
 #include <bits/stdc++.h>
-#include "./helper.h"
+#include "../helper.h"
 using namespace std;
 
-int main() {
-    setIO("/home/uggi/projects/DSA/CSES/tests/IntroductoryProblems/MissingNumber1083/1.in") ;
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+int main()
+{
+    setIO("/home/uggi/projects/DSA/CSES/tests/IntroductoryProblems/MissingNumber1083/3.in");
 
-    // CSES Problem: MissingNumber (1083)
-    // Reads from stdin, writes to stdout
-    // Sample usage for debugging against test files:
-    // freopen("input.in", "r", stdin);
-    // freopen("output.out", "w", stdout);
-
-    int n;
+    unsigned long long int n, a, sum;
     cin >> n;
-    cout << n << "\n";
 
-    return 0;
+    sum = n * (n + 1);
+    sum >>= 1;
+    while (cin >> a)
+    {
+        sum -= a;
+    }
+
+    cout << sum << "\n";
 }

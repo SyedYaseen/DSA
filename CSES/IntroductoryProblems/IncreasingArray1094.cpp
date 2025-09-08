@@ -1,21 +1,26 @@
 #include <bits/stdc++.h>
-#include "./helper.h"
+#include "../helper.h"
 using namespace std;
 
-int main() {
-    setIO("/home/uggi/projects/DSA/CSES/tests/IntroductoryProblems/IncreasingArray1094/1.in") ;
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+int main()
+{
+    setIO("/home/uggi/projects/DSA/CSES/tests/IntroductoryProblems/IncreasingArray1094/6.in");
+    long long int prev, curr, res = 0;
+    cin >> prev;
 
-    // CSES Problem: IncreasingArray (1094)
-    // Reads from stdin, writes to stdout
-    // Sample usage for debugging against test files:
-    // freopen("input.in", "r", stdin);
-    // freopen("output.out", "w", stdout);
+    cin >> prev;
 
-    int n;
-    cin >> n;
-    cout << n << "\n";
+    while (cin >> curr)
+    {
+        if (curr < prev)
+        {
+            res += prev - curr;
+        }
+        else
+        {
+            prev = curr;
+        }
+    }
 
-    return 0;
+    cout << "res: " << res << "\n";
 }

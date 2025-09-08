@@ -1,9 +1,10 @@
 #include <bits/stdc++.h>
-#include "./helper.h"
+#include "../helper.h"
 using namespace std;
 
-int main() {
-    setIO("/home/uggi/projects/DSA/CSES/tests/Mathematics/CommonDivisors1081/1.in") ;
+int main()
+{
+    setIO("/home/uggi/projects/DSA/CSES/tests/Mathematics/CommonDivisors1081/1.in");
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 

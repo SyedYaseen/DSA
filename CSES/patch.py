@@ -32,16 +32,16 @@ def patch_cpp(file_path):
     with open(file_path, "r") as f:
         code = f.read()
 
-    # 1️⃣ Add #include "./helper.h" if not already present
-    if '#include "./helper.h"' not in code:
+    # 1️⃣ Add #include "../helper.h" if not already present
+    if '#include "../helper.h"' not in code:
         # Insert after the last #include
         includes = list(re.finditer(r'#include\s*[<"].+[>"]', code))
         if includes:
             last_include = includes[-1]
             pos = last_include.end()
-            code = code[:pos] + '\n#include "./helper.h"' + code[pos:]
+            code = code[:pos] + '\n#include "../helper.h"' + code[pos:]
         else:
-            code = '#include "./helper.h"\n' + code
+            code = '#include "../helper.h"\n' + code
 
     # 2️⃣ Replace any setIO(...) with correct path
     code = re.sub(

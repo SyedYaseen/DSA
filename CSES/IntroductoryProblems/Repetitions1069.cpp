@@ -1,21 +1,40 @@
 #include <bits/stdc++.h>
-#include "./helper.h"
+#include "../helper.h"
 using namespace std;
 
-int main() {
-    setIO("/home/uggi/projects/DSA/CSES/tests/IntroductoryProblems/Repetitions1069/1.in") ;
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+int main()
+{
+    setIO("/home/uggi/projects/DSA/CSES/tests/IntroductoryProblems/Repetitions1069/4.in");
 
-    // CSES Problem: Repetitions (1069)
-    // Reads from stdin, writes to stdout
-    // Sample usage for debugging against test files:
-    // freopen("input.in", "r", stdin);
-    // freopen("output.out", "w", stdout);
+    string t;
+    cin >> t;
 
-    int n;
-    cin >> n;
-    cout << n << "\n";
+    char prev = t[0];
+    long long int res = 1, curr = 1;
+
+    for (int i = 1; i < t.length(); i++)
+    {
+        if (prev == t[i])
+        {
+            curr++;
+        }
+        else
+        {
+            if (res < curr)
+            {
+                res = curr;
+            }
+            curr = 0;
+            prev = t[i];
+        }
+    }
+
+    if (res < curr)
+    {
+        res = curr;
+    }
+
+    cout << res << "\n";
 
     return 0;
 }
