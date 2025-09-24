@@ -1,22 +1,57 @@
 #include <bits/stdc++.h>
-#include "../helper.h"
 using namespace std;
 
 int main()
 {
-    setIO("/home/uggi/projects/DSA/CSES/tests/IntroductoryProblems/PalindromeReorder1755/1.in");
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+    string s;
+    cin >> s;
+    int fq[26] = {};
+    for (char c : s)
+    {
+        fq[c - 65]++;
+    }
+    string res;
+    char odd = '\0';
 
-    // CSES Problem: PalindromeReorder (1755)
-    // Reads from stdin, writes to stdout
-    // Sample usage for debugging against test files:
-    // freopen("input.in", "r", stdin);
-    // freopen("output.out", "w", stdout);
+    int i = 0;
+    for (; i < 26; i++)
+    {
+        if (fq[i] & 0b1)
+        {
+            if (odd != '\0')
+            {
+                cout << "NO SOLUTION";
+                return 0;
+            }
+            else
+            {
+                fq[i]--;
+                odd = (char)65 + i;
+            }
+        }
 
-    int n;
-    cin >> n;
-    cout << n << "\n";
+        if (fq[i] == 0)
+            continue;
+
+        for (int j = 0; j < fq[i] / 2; j++)
+        {
+            res += (char)65 + i;
+        }
+    }
+
+    s = "";
+    i = res.size() - 1;
+    for (; i >= 0; i--)
+    {
+        s += res[i];
+    }
+
+    if (odd != '\0')
+    {
+        res += odd;
+    }
+
+    cout << res + s << "\n";
 
     return 0;
 }

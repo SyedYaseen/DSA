@@ -2,21 +2,23 @@
 #include "../helper.h"
 using namespace std;
 
+void recur(int n, char a, char b, char c)
+{
+    if (n == 1)
+    {
+        cout << a << " " << c << "\n";
+        return;
+    }
+
+    recur(n - 1, a, c, b);
+    cout << a << " " << c << "\n";
+    recur(n - 1, b, a, c);
+}
+
 int main()
 {
-    setIO("/home/uggi/projects/DSA/CSES/tests/IntroductoryProblems/TowerofHanoi2165/1.in");
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    // CSES Problem: TowerofHanoi (2165)
-    // Reads from stdin, writes to stdout
-    // Sample usage for debugging against test files:
-    // freopen("input.in", "r", stdin);
-    // freopen("output.out", "w", stdout);
-
-    int n;
-    cin >> n;
-    cout << n << "\n";
+    int n = 3;
+    recur(n, '1', '2', '3');
 
     return 0;
 }
