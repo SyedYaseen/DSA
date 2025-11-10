@@ -1,9 +1,6 @@
 #include <bits/stdc++.h>
-#include "../helper.h"
 using namespace std;
-// own solution
-// 1. Add all apples to one  basket
-// 2. Keep (recursively) removing (different) apples until we get the lower non negative difference
+
 long long res = LLONG_MAX;
 void backtrack(int idx, long long int s1, long long int s2, vector<int> &w)
 {
@@ -19,9 +16,6 @@ void backtrack(int idx, long long int s1, long long int s2, vector<int> &w)
 
 int main()
 {
-    setIO("/home/uggi/projects/DSA/CSES/tests/IntroductoryProblems/AppleDivision1623/3.in");
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
     int n;
     cin >> n;
     vector<int> w;

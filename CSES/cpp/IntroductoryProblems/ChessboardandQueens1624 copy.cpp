@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include "../helper.h"
 using namespace std;
 
 void dfs(int c, vector<vector<char>> &board, int &res, unordered_set<int> &rows, unordered_set<int> &pd, unordered_set<int> &nd)
@@ -26,10 +25,6 @@ void dfs(int c, vector<vector<char>> &board, int &res, unordered_set<int> &rows,
 
 int main()
 {
-    setIO("/home/uggi/projects/DSA/CSES/tests/IntroductoryProblems/ChessboardandQueens1624/3.in");
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     vector<vector<char>> board(8, vector<char>(8, '.'));
     for (int i = 0; i < 8; i++)
     {
